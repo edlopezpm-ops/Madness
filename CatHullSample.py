@@ -1,7 +1,11 @@
 import FreeCAD as App
-import FreeCADGui as Gui
 import Draft
 import Part
+
+try:
+    import FreeCADGui as Gui
+except Exception:
+    Gui = None
 
 
 doc = App.newDocument("Draft_Catamaran_Hull_Lines")
@@ -48,8 +52,9 @@ starboard_hull_y = hull_spacing / 2
 # =========================
 
 def style(obj, color=(0.2, 0.45, 0.9), width=2):
-    obj.ViewObject.LineColor = color
-    obj.ViewObject.LineWidth = width
+    if Gui is not None and getattr(obj, "ViewObject", None) is not None:
+        obj.ViewObject.LineColor = color
+        obj.ViewObject.LineWidth = width
     return obj
 
 
@@ -226,8 +231,9 @@ style(centerline, (0.5, 0.5, 0.5), 1)
 
 doc.recompute()
 
-Gui.ActiveDocument.ActiveView.viewAxometric()
-Gui.SendMsgToActiveView("ViewFit")
+if Gui is not None and getattr(Gui, "ActiveDocument", None) is not None:
+    Gui.ActiveDocument.ActiveView.viewAxometric()
+    Gui.SendMsgToActiveView("ViewFit")
 
 
 print("Draft catamaran hull lines created.")

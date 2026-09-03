@@ -5,7 +5,10 @@ import FreeCAD as App
 # Este módulo controla documentos, geometría base, vectores, recompute, unidades, etc.
 
 
-import FreeCADGui as Gui
+try:
+    import FreeCADGui as Gui
+except Exception:
+    Gui = None
 # COMANDO DE IMPORTACIÓN:
 # Importa la parte visual/interfaz de FreeCAD.
 # Le damos el alias "Gui".
@@ -83,6 +86,9 @@ def style(obj, color=(0.2, 0.45, 0.9), width=2):
 # color es un parámetro opcional con valor por defecto.
 # width es otro parámetro opcional con valor por defecto.
 # Esta función sirve para cambiar el color y grosor visual de una curva.
+
+    if Gui is None or getattr(obj, "ViewObject", None) is None:
+        return obj
 
     obj.ViewObject.LineColor = color
     # COMANDO/PROPIEDAD DE FREECAD:
@@ -654,13 +660,14 @@ doc.recompute()
 # No cambia la geometría del casco.
 
 
-Gui.ActiveDocument.ActiveView.viewAxometric()
+if Gui is not None and getattr(Gui, "ActiveDocument", None) is not None:
+    Gui.ActiveDocument.ActiveView.viewAxometric()
 # COMANDO DE FREECAD GUI:
 # Cambia la cámara a vista axonométrica/isométrica.
 # Sirve para ver el casco en 3D.
 
 
-Gui.SendMsgToActiveView("ViewFit")
+    Gui.SendMsgToActiveView("ViewFit")
 # COMANDO DE FREECAD GUI:
 # Ajusta el zoom para que todo el modelo entre en la pantalla.
 # Es como “zoom extents” o “fit all”.
