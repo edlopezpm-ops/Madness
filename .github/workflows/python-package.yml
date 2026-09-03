@@ -1,1 +1,16 @@
-# Retained to preserve repository history. The active validation workflow is python-app.yml.
+name: Legacy Python package workflow
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  archived:
+    name: archived
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Explain replacement
+        # (kommiBo) Retain this historical path without duplicating automatic validation.
+        run: echo "This legacy workflow is disabled; use .github/workflows/python-app.yml."
