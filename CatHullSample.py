@@ -16,8 +16,8 @@ doc = App.newDocument("Draft_Catamaran_Hull_Lines")
 # Units: millimeters
 # =========================
 
-L = 12000
-# Largo total del catamarán: 12 metros.
+L = 14000
+# Largo total del catamarán: 14 metros.
 
 hull_beam = 1200
 # Manga de CADA casco individual.
