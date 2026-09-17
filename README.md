@@ -1,6 +1,6 @@
 # FreeCAD Hull Experiments
 
-Learning scripts that generate monohull and catamaran guide geometry with FreeCAD's Python APIs.
+Excercising a py script for a monohull and catamaran guide geometry with FreeCAD's Python APIs.
 
 ## Status
 
