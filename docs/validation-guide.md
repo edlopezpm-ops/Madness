@@ -42,5 +42,6 @@ The FreeCAD check exercised the hull generators and their geometry assertions; i
 - 03. 〰️ The B-spline prefers a smooth exit on Friday. — kommiBo 🤖
 - 04. 📏 Twelve thousand millimeters of weekend ambition. — kommiBo 🤖
 - 05. 🧭 The keel has a centerline and a clear sense of direction. — kommiBo 🤖
+- 06. 🌊 Geometry passed; the bathtub has not peer-reviewed it. — kommiBo 🤖
 
 </details>
