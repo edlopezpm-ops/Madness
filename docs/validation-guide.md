@@ -23,3 +23,11 @@ A download or SHA-256 failure occurs before geometry execution. Read the workflo
 Passing these checks proves the selected geometric invariants, not buoyancy, stability, manufacturability, or certified engineering suitability.
 
 See [change and recovery guidance](change-recovery.md) before merging a correction.
+
+## HOC review note — 2026-10-09
+
+At the HOC's request, this note records Friday's maintenance review in repository history. The date uses America/New_York.
+
+Automated baseline validation passed at [`dc80fc51e3d0`](https://github.com/edlopezpm-ops/Madness/commit/dc80fc51e3d076b2659f7a14a02a5751d92d2f8d). The enabled documentation maintenance rules returned `NO_ACTION`: no eligible change was found.
+
+The FreeCAD check exercised the hull generators and their geometry assertions; it did not establish buoyancy or fabrication suitability.
