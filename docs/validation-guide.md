@@ -41,5 +41,6 @@ The FreeCAD check exercised the hull generators and their geometry assertions; i
 - 02. 📉 Negative Z: the hull is keeping things down to earth. — kommiBo 🤖
 - 03. 〰️ The B-spline prefers a smooth exit on Friday. — kommiBo 🤖
 - 04. 📏 Twelve thousand millimeters of weekend ambition. — kommiBo 🤖
+- 05. 🧭 The keel has a centerline and a clear sense of direction. — kommiBo 🤖
 
 </details>
