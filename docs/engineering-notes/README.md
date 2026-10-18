@@ -27,3 +27,4 @@ Successful syntax or analytical checks do not establish a geometry-runtime pass.
 - [Measure curve bounds separately from nominal dimensions](bounds-report.md) — **FreeCAD**.
 - [Resolve display labels without assuming internal names](label-lookup.md) — **FreeCAD**.
 - [Compare keel and sheer samples with station points](guide-consistency.md) — **FreeCAD**.
+- [Locate bridge references and check index validity](bridge-schedule.md) — **Python**.
