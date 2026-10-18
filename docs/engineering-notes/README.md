@@ -30,3 +30,4 @@ Successful syntax or analytical checks do not establish a geometry-runtime pass.
 - [Locate bridge references and check index validity](bridge-schedule.md) — **Python**.
 - [Distinguish Python parameters from editable document properties](recompute-and-edit.md) — **FreeCAD**.
 - [Exercise the presentation guard without a GUI](headless-style.md) — **Python**.
+- [Round-trip a selected guide through a temporary BREP](brep-roundtrip.md) — **FreeCAD**.
