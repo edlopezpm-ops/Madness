@@ -21,3 +21,4 @@ Successful syntax or analytical checks do not establish a geometry-runtime pass.
 - [Print a reproducible station schedule](station-schedule.md) — **Python**.
 - [Check beam, depth, and rocker calculations together](distribution-check.md) — **Python**.
 - [Calculate center spacing and the nominal inner gap](catamaran-spacing.md) — **Python**.
+- [Inspect the defining points of a transverse section](section-symmetry.md) — **FreeCAD**.
