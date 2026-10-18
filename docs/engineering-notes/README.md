@@ -26,3 +26,4 @@ Successful syntax or analytical checks do not establish a geometry-runtime pass.
 - [Locate null and invalid guide shapes by object](shape-diagnostics.md) — **FreeCAD**.
 - [Measure curve bounds separately from nominal dimensions](bounds-report.md) — **FreeCAD**.
 - [Resolve display labels without assuming internal names](label-lookup.md) — **FreeCAD**.
+- [Compare keel and sheer samples with station points](guide-consistency.md) — **FreeCAD**.
