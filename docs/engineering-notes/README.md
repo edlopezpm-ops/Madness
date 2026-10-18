@@ -25,3 +25,4 @@ Successful syntax or analytical checks do not establish a geometry-runtime pass.
 - [Map Python collections to the document tree](object-tree.md) — **FreeCAD**.
 - [Locate null and invalid guide shapes by object](shape-diagnostics.md) — **FreeCAD**.
 - [Measure curve bounds separately from nominal dimensions](bounds-report.md) — **FreeCAD**.
+- [Resolve display labels without assuming internal names](label-lookup.md) — **FreeCAD**.
