@@ -32,3 +32,4 @@ Successful syntax or analytical checks do not establish a geometry-runtime pass.
 - [Exercise the presentation guard without a GUI](headless-style.md) — **Python**.
 - [Round-trip a selected guide through a temporary BREP](brep-roundtrip.md) — **FreeCAD**.
 - [Save and reopen a generated document in temporary custody](document-roundtrip.md) — **FreeCAD**.
+- [Track documents created by repeated generator runs](repeat-run-custody.md) — **FreeCAD**.
