@@ -24,3 +24,4 @@ Successful syntax or analytical checks do not establish a geometry-runtime pass.
 - [Inspect the defining points of a transverse section](section-symmetry.md) — **FreeCAD**.
 - [Map Python collections to the document tree](object-tree.md) — **FreeCAD**.
 - [Locate null and invalid guide shapes by object](shape-diagnostics.md) — **FreeCAD**.
+- [Measure curve bounds separately from nominal dimensions](bounds-report.md) — **FreeCAD**.
