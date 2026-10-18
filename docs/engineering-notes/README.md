@@ -18,3 +18,4 @@ For the full baseline, see the [existing validation guide](../validation-guide.m
 Successful syntax or analytical checks do not establish a geometry-runtime pass.
 
 - [Inventory dimensions without importing FreeCAD](parameter-inventory.md) — **Python**.
+- [Print a reproducible station schedule](station-schedule.md) — **Python**.
