@@ -29,3 +29,4 @@ Successful syntax or analytical checks do not establish a geometry-runtime pass.
 - [Compare keel and sheer samples with station points](guide-consistency.md) — **FreeCAD**.
 - [Locate bridge references and check index validity](bridge-schedule.md) — **Python**.
 - [Distinguish Python parameters from editable document properties](recompute-and-edit.md) — **FreeCAD**.
+- [Exercise the presentation guard without a GUI](headless-style.md) — **Python**.
