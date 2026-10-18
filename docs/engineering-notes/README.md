@@ -23,3 +23,4 @@ Successful syntax or analytical checks do not establish a geometry-runtime pass.
 - [Calculate center spacing and the nominal inner gap](catamaran-spacing.md) — **Python**.
 - [Inspect the defining points of a transverse section](section-symmetry.md) — **FreeCAD**.
 - [Map Python collections to the document tree](object-tree.md) — **FreeCAD**.
+- [Locate null and invalid guide shapes by object](shape-diagnostics.md) — **FreeCAD**.
