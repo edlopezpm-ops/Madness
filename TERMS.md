@@ -2,7 +2,7 @@
 
 # Use and service boundaries — Madness
 
-Reviewed 2026-11-01.
+Reviewed 2026-11-02.
 
 ## What is provided
 
@@ -12,6 +12,43 @@ There is no service subscription, availability commitment or support SLA created
 reading or running this repository. A separate written agreement is needed for any
 professional delivery or hosted service. Review the actual deployment before relying
 on it; source visibility is not evidence of a production service or compliance certification.
+
+<!-- (kommiBo) User responsibility, outcome limits and non-waivable rights. -->
+## Your responsibility to understand and validate use
+
+Before running or adapting the project, read its purpose, requirements, instructions and
+documented limitations. You are responsible for assessing whether you have the technical
+knowledge, authorized systems and data, and suitable environment to use it safely. If you
+do not understand an instruction or possible effect, pause and seek clarification or
+competent assistance before proceeding. AEKR branding is not a substitute for that review.
+
+You control your environment, configuration, inputs, modifications and decisions to deploy
+or rely on outputs. Validate results for your intended use and take appropriate precautions,
+including isolation and recovery arrangements where effects could matter.
+
+For these hull experiments, FreeCAD geometry checks do not establish buoyancy, vessel stability or fabrication safety. Obtain competent engineering review before any real construction or operation; do not treat guide curves as an approved vessel design.
+
+## No guaranteed outcome or individual suitability
+
+AEKR does not guarantee that this project will meet your personal or business goals, run
+successfully in every environment, or produce a particular result. Difficulty installing,
+running or understanding it does not by itself create a promise of successful results,
+individual training or custom support. Any applicable license, written agreement and
+mandatory legal obligations continue to govern.
+
+## Responsibility for misuse and limits on exclusions
+
+To the extent permitted by applicable law, AEKR is not responsible for loss or damage
+caused by your misuse, unauthorized use, modifications, disregard of documented requirements
+or warnings, or reliance on outputs without appropriate validation. An unsuccessful attempt,
+unexpected result or misunderstanding does not by itself establish that AEKR promised a
+successful outcome or accepted responsibility for your independent decisions.
+
+Nothing in these notes excludes or limits rights that cannot lawfully be waived, liability
+that cannot lawfully be excluded or limited, or obligations under an applicable license or
+separate written agreement. These notes do not excuse AEKR from its own mandatory duties
+or establish that every failure is the user's fault. They provide no new license grant and
+do not change the existing project's permissions or copyright ownership.
 
 ## License and ownership take precedence
 
