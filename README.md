@@ -10,7 +10,14 @@ The models are visual experiments, not certified naval architecture, fabrication
 
 Requirements: FreeCAD 1.1.3.
 
-Open either script in the FreeCAD Python console, or run it from the repository root:
+<!-- (kommiBo) Repeated runs create separate documents rather than updating one model. -->
+Use a fresh disposable FreeCAD session for the commands below. Both scripts create a new
+document when executed; rerunning one does not update an earlier model in place. In an
+interactive session, keep the `doc` from the intended run and save your own work before
+manually closing experiments. See [repeat-run custody](docs/engineering-notes/repeat-run-custody.md)
+and the [use boundaries](TERMS.md).
+
+Open either script in that session's Python console, or run it from the repository root:
 
 ```bash
 freecadcmd --safe-mode --console "import runpy; runpy.run_path('CatHullSample.py')"
