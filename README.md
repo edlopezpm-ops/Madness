@@ -1,6 +1,6 @@
 # FreeCAD Hull Experiments
 
-Excercising a py script for a monohull and catamaran guide geometry with FreeCAD's Python APIs.
+Local Python experiments that generate monohull and catamaran guide geometry through FreeCAD's APIs.
 
 ## Status
 
@@ -27,7 +27,7 @@ The validator executes both generators and verifies their object counts, expecte
 
 ## License
 
-No license file is present, so this repository grants no general permission to copy, modify, distribute, or reuse the work. Professionalization did not add or change licensing terms.
+No project license has been selected. GitHub’s platform terms permit viewing and forking; broader project reuse requires appropriate permission. The separate AEKR provenance notice does not license the project material.
 
 ## Governance
 
@@ -37,6 +37,19 @@ Changes follow the AEKR engineering workflow: bounded scope, deterministic geome
 ## Engineering recipes
 
 See the [engineering notes](docs/engineering-notes/README.md) for reproducible examples, source references and validation limits.
+
+<!-- (kommiBo) Project-specific behavior, privacy and permission boundaries. -->
+## Privacy, use and permissions
+
+The generators build guide curves in a local FreeCAD process. Their validation does
+not establish buoyancy, stability or fabrication safety. Saving or sharing CAD files
+requires a separate review of document labels, properties and export metadata.
+
+- [Privacy notice](PRIVACY.md): project processing, hosting and requests.
+- [Use and service boundaries](TERMS.md): intended use and license precedence.
+- [Licensing inventory](docs/licensing.md): project, dependency and AEKR provenance scopes.
+- [Data handling](docs/data-handling.md): local artifacts and publication checks.
+- [Security reporting](SECURITY.md): private reports and support limits.
 
 ---
 
