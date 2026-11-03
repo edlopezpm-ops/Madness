@@ -1,14 +1,18 @@
 {
-  // (kommiBo) Asset-only public deployment, bounded to the Weekly Leverage paths.
+  // (kommiBo) Native static assets plus two bounded optional metrics routes.
   "name": "aekr-weekly-leverage",
   "compatibility_date": "2026-11-03",
+  "main": "./worker.mjs",
   "workers_dev": false,
   "preview_urls": false,
   "assets": {
     "directory": "./dist",
+    "binding": "ASSETS",
+    "run_worker_first": ["/weekly-leverage/api/metrics", "/weekly-leverage/api/metrics/config"],
     "html_handling": "auto-trailing-slash",
     "not_found_handling": "none",
   },
+  "services": [{ "binding": "WEEKLY_METRICS", "service": "aekr-console", "entrypoint": "WeeklyLeverageMetrics" }],
   "routes": [
     { "pattern": "aekr.io/weekly-leverage", "zone_name": "aekr.io" },
     { "pattern": "aekr.io/weekly-leverage/*", "zone_name": "aekr.io" },
