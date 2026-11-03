@@ -57,7 +57,7 @@ class PackageTests(unittest.TestCase):
         parser = PageLinks()
         parser.feed((ROOT / 'index.html').read_text())
         public_url = 'https://aekr.io/weekly-leverage/'
-        image_url = public_url + 'social-card.png'
+        image_url = public_url + 'social-card.png?v=ed94dfa8f232'
         meta = parser.metadata
         self.assertEqual(parser.canonical, [public_url])
         self.assertEqual(meta['og:url'], public_url)
@@ -65,17 +65,17 @@ class PackageTests(unittest.TestCase):
         self.assertEqual(meta['twitter:image'], image_url)
         self.assertEqual(meta['twitter:card'], 'summary_large_image')
         self.assertEqual(meta['og:image:type'], 'image/png')
-        self.assertEqual(meta['og:image:width'], '1200')
-        self.assertEqual(meta['og:image:height'], '630')
+        self.assertEqual(meta['og:image:width'], '1731')
+        self.assertEqual(meta['og:image:height'], '909')
         self.assertEqual(meta['og:title'], meta['twitter:title'])
         self.assertEqual(meta['og:image:alt'], meta['twitter:image:alt'])
-        self.assertIn('Built with AEKR', meta['og:image:alt'])
+        self.assertIn('AEKR / Weekly Leverage', meta['og:image:alt'])
         for key in ('og:description', 'twitter:description'):
             self.assertTrue(meta[key])
         image = (ROOT / 'social-card.png').read_bytes()
         self.assertEqual(image[:8], b'\x89PNG\r\n\x1a\n')
         self.assertEqual(image[12:16], b'IHDR')
-        self.assertEqual(struct.unpack('>II', image[16:24]), (1200, 630))
+        self.assertEqual(struct.unpack('>II', image[16:24]), (1731, 909))
         self.assertLess(len(image), 5_000_000)
 
     def test_individual_downloads_match_all_three_language_manifests(self):
