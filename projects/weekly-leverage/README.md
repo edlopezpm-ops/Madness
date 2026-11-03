@@ -66,7 +66,7 @@ Record the exact source/merge, deployed version, current route IDs and anonymous
 
 The existing vendor-managed static-assets path is retained, without a new paid-service plan or model billing. Cloudflare documents [static asset requests/storage](https://developers.cloudflare.com/workers/static-assets/billing-and-limitations/) separately from Worker-script execution. Provider/account policies still apply.
 
-The existing 1200×630 Open Graph/X image remains at `social-card.png`; editable source is `social/social-card.svg`. The header and browser favicon use the same owner-supplied, rust-accented `aekr-mark.png`. The transparent footer signature follows the accreatio layout while using this page's colors. Instagram and X link to AEKR's `__aekr` profiles.
+The Open Graph/X image at `social-card.png` is the owner-supplied 1731×909 PNG, preserved byte-for-byte. Its metadata URL includes a content-fingerprint query so social crawlers receive a new image URL when the artwork changes. Dimensions and alternative text describe that image. `social/social-card.svg` is historical artwork, excluded from publication. The header and browser favicon use the same owner-supplied, rust-accented `aekr-mark.png`. The transparent footer signature follows the accreatio layout while using this page's colors. Instagram and X link to AEKR's `__aekr` profiles.
 
 ## Use and permissions
 
