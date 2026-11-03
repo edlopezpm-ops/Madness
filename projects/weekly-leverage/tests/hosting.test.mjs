@@ -50,7 +50,7 @@ test("publication contains only public site assets under the dedicated path and 
       "weekly-leverage",
     ]);
     const files = await readdir(join(dist, "weekly-leverage"));
-    assert.equal(files.length, 12); // Ten top-level files, prompt files and locale directories.
+    assert.equal(files.length, 13); // Eleven top-level files, prompt files and locale directories.
     assert.ok(
       !files.includes("README.md") &&
         !files.includes("hosting") &&
