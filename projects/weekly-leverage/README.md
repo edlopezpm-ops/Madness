@@ -32,7 +32,9 @@ Browser verification should cover all six prompt choices, custom capacity, clipb
 
 ## Files and publishing
 
-`index.html`, `style.css`, `app.js`, `planner.mjs`, `favicon.svg`, `prompts.json`, `prompts/*.txt`, `USE-NOTES.txt` and `weekly-leverage-prompts.zip` are the publishable allowlist. Publish these only; keep tests, Git metadata and operational evidence out of the site artifact.
+`index.html`, `style.css`, `app.js`, `planner.mjs`, `favicon.svg`, `social-card.png`, `aekr-mark.png`, `prompts.json`, `prompts/*.txt`, `USE-NOTES.txt` and `weekly-leverage-prompts.zip` are the publishable allowlist. Publish these only; keep tests, Git metadata and operational evidence out of the site artifact.
+
+The canonical public URL carries Open Graph and X `summary_large_image` metadata pointing to `social-card.png`, an original 1200×630 image with the site's visual identity and Built with AEKR branding. Its editable source is `social/social-card.svg`; export that source to the same PNG dimensions when changing the artwork. The SVG source stays outside the deployed allowlist. `aekr-mark.png` is the owner-supplied orbital mark with the green accent changed to the site's rust red; the header logo links directly to `https://aekr.io/`. Social platforms control their own cached previews; deployment verification checks the actual public metadata and image responses.
 
 `prompts.json`, individual prompt files and ZIP copies must agree. The tests check that contract. The ZIP contains the six generic starters and use notes; the single-file browser download includes the visitor's optional context.
 
@@ -48,9 +50,9 @@ npx wrangler@4.157.0 deploy --config hosting/wrangler.jsonc --dry-run
 npx wrangler@4.157.0 deploy --config hosting/wrangler.jsonc
 ```
 
-Use the intended Cloudflare account. Do not add credentials to the repository. The build copies only the 14 public assets into an ignored `hosting/dist/weekly-leverage/` directory and adds the scoped response headers. It refuses unexpected preexisting output files rather than publishing or deleting them. The deployment has no custom GitHub Actions workflow and needs no model API.
+Use the intended Cloudflare account. Do not add credentials to the repository. The build copies only the 16 public assets into an ignored `hosting/dist/weekly-leverage/` directory and adds the scoped response headers. It refuses unexpected preexisting output files rather than publishing or deleting them. The deployment has no custom GitHub Actions workflow and needs no model API.
 
-The route without a trailing slash redirects to the public slash URL. Share the slash URL, especially with query parameters: Cloudflare's exact bare-path route does not match query strings. `hosting/_headers` applies only to the new static application and sets CSP, HSTS and framing controls. It does not change headers for other aekr.io applications.
+The route without a trailing slash redirects to the public slash URL. Share the slash URL, especially with query parameters: Cloudflare's exact bare-path route does not match query strings. `hosting/_headers` applies only to the new static application and sets CSP, HSTS and framing controls. It does not change headers for other aekr.io applications. The scoped `no-transform` cache directive prevents automatic host-side HTML rewriting, including Cloudflare Web Analytics injection, for this tool without changing zone-wide settings.
 
 Record the actual deployed version, routes and live browser/download evidence before claiming publication. On a later update, retain the prior version ID and use the provider rollback command for this Worker only. For the first release, recovery is removal of only the two newly created route IDs from the saved deployment receipt; never delete unrelated routes or change the existing homepage Worker. Keep the source and deployment configuration available for a reviewed corrective release.
 
