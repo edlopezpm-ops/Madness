@@ -1,0 +1,23 @@
+WEEKLY LEVERAGE — NOTAS DE USO
+Creado con AEKR · https://aekr.io
+
+Puedes usar y adaptar los seis textos de los prompts para tu planificación personal o interna de negocio, incluso
+copiarlos en el asistente de IA que elijas. Este permiso se limita a prompts/*.txt
+y al mismo texto de los prompts incluido en este paquete; no es una licencia para el resto de Madness,
+el código del sitio web, los productos de terceros ni las marcas de AEKR. Los derechos existentes no cambian.
+
+Esta es una ayuda para planificar. Revisa las estimaciones, fechas, zonas horarias y respuestas de la IA antes de basarte en ellas.
+No se garantiza ningún resultado concreto de productividad, financiero o personal. Los derechos
+y las obligaciones de cumplimiento obligatorio que sean aplicables siguen vigentes. Esto no es asesoramiento de salud, médico, legal ni financiero.
+
+El sitio web no se conecta a tus apps ni envía tus datos a una IA. Los datos de planificación se procesan sólo
+en esta pestaña. Cuando eliges un idioma o un tema, esas dos preferencias pueden guardarse en tu navegador
+con las claves weekly-leverage-language y weekly-leverage-theme; no se guarda el contenido del plan.
+No se ha implementado una cuenta ni un sistema de recopilación de analítica.
+El proveedor de alojamiento procesa las solicitudes de páginas y archivos según sus propias políticas. Cuando pegas un prompt en un
+asistente de IA o usas un conector, se aplican las condiciones, la configuración y las prácticas de datos de ese proveedor.
+Evita secretos o tareas confidenciales; usa nombres anonimizados. Revisa y aprueba cualquier cambio externo antes de ejecutarlo.
+
+Empieza con 01-plan-my-week.txt. Después usa los otros prompts sólo cuando sean útiles.
+Valores por defecto (editables): 20% de margen, hasta 50 minutos de concentración y pausas de 10 minutos contados dentro de la capacidad,
+un resultado principal al día, un cierre diario breve y una revisión semanal. No hace falta una app nueva ni una API de modelo de pago.

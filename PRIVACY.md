@@ -32,8 +32,13 @@ dependency, host, historical artifact or future deployment.
 [Weekly Leverage](projects/weekly-leverage/README.md) is a separate static prompt toolkit.
 Its customizer holds optional planning context temporarily in the current browser tab and
 uses it to prepare text for copying or download. It implements no analytics collector,
-account, persistent browser storage, model API call or calendar/task connector. Its only
-application fetch loads the bundled prompt JSON from the same site.
+account, cookie, model API call or calendar/task connector. Only the optional language and manual
+theme preferences persist on the device, under `weekly-leverage-language` and `weekly-leverage-theme`;
+planning entries are never persisted. Application fetches load fixed bundled UI/prompt JSON from this same
+subproject. Public files use normal HTTP caching; loaded language bundles are reused in memory.
+The footer links to AEKR master policies. This tool does not load the main site's collection, consent or
+policy-dialog scripts and does not enable future measurement. Any collection release needs its own
+reviewed implementation, updated disclosures and applicable choices before activation.
 
 Copying the result into an AI assistant is a separate disclosure to the provider chosen
 by the visitor. External connectors, if available there, require their own authorization.

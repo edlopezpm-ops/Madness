@@ -50,7 +50,9 @@
     />
     <title>Weekly Leverage — Built with AEKR</title>
     <link rel="canonical" href="https://aekr.io/weekly-leverage/" />
-    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="aekr-mark.png" type="image/png" sizes="256x256" />
+    <meta name="color-scheme" content="light dark" />
+    <script src="theme.js"></script>
     <link rel="stylesheet" href="style.css" />
     <script type="module" src="app.js"></script>
   </head>
@@ -74,6 +76,68 @@
         <a href="#how">The approach</a
         ><a href="#toolkit">The prompts <span aria-hidden="true">↗</span></a>
       </nav>
+      <div class="preferences" id="preferences">
+        <div class="language-control">
+          <button
+            id="language-toggle"
+            type="button"
+            aria-label="Choose language"
+            aria-expanded="false"
+            aria-controls="language-options"
+            disabled
+          >
+            EN
+          </button>
+          <div id="language-options" class="language-options" hidden>
+            <div role="group" aria-label="Language options">
+              <button type="button" data-language="en" lang="en">
+                English
+              </button>
+              <button type="button" data-language="es" lang="es">
+                Español
+              </button>
+              <button type="button" data-language="pt" lang="pt-BR">
+                Português
+              </button>
+            </div>
+            <button id="system-theme" type="button">Use system theme</button>
+          </div>
+        </div>
+        <button
+          id="theme-toggle"
+          type="button"
+          aria-label="Switch to dark mode"
+          aria-pressed="false"
+          hidden
+        >
+          <svg
+            class="moon-icon"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+            focusable="false"
+          >
+            <path
+              d="M18.8 16.6A8.5 8.5 0 0 1 7.4 5.2 8.5 8.5 0 1 0 18.8 16.6Z"
+              fill="currentColor"
+            />
+          </svg>
+          <svg
+            class="sun-icon"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+            focusable="false"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+          >
+            <circle cx="12" cy="12" r="4" />
+            <path
+              d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"
+            />
+          </svg>
+        </button>
+      </div>
     </header>
 
     <main id="main">
@@ -96,13 +160,8 @@
           <div class="hero-actions">
             <a class="button primary" href="#toolkit"
               >Build my weekly prompt <span aria-hidden="true">↗</span></a
-            ><a class="text-link" href="weekly-leverage-prompts.zip" download
-              >Get the whole kit <span class="file-tag">ZIP</span></a
             >
           </div>
-          <p class="microcopy">
-            No account. No new app. No AI subscription required by this kit.
-          </p>
         </div>
         <div
           class="week-illustration"
@@ -201,10 +260,6 @@
                 A good prompt.<br />A practical starting point.
               </h2>
             </div>
-            <p>
-              Choose a moment. Add a little context.<br />Copy it into the AI
-              you use.
-            </p>
           </div>
           <div class="toolkit-grid">
             <aside class="prompt-menu" aria-label="Choose a planning prompt">
@@ -280,14 +335,6 @@
                   ><small>Keep what worked</small></span
                 ><span class="choice-arrow" aria-hidden="true">↗</span>
               </button>
-              <a
-                class="starter-download"
-                href="weekly-leverage-prompts.zip"
-                download
-                >Download all six starter prompts
-                <span aria-hidden="true">↓</span
-                ><small>ZIP · plain text · use and adapt</small></a
-              >
             </aside>
 
             <div class="prompt-workspace">
@@ -423,8 +470,8 @@ Loading the prompt preview. You can also download the starter files below.</text
               </p>
               <noscript
                 ><p class="no-script">
-                  The customizer needs JavaScript. All six starter prompts and
-                  the ZIP still work below.
+                  The customizer needs JavaScript. All six starter prompts still
+                  work below.
                 </p></noscript
               >
             </div>
@@ -446,6 +493,46 @@ Loading the prompt preview. You can also download the starter files below.</text
                 >06 · Close and repeat</a
               >
             </div>
+            <noscript
+              ><h3 lang="es">Español</h3>
+              <div class="file-links" lang="es">
+                <a href="locales/es/prompts/01-plan-my-week.txt" download
+                  >01 · Planificar mi semana</a
+                ><a href="locales/es/prompts/02-define-the-tasks.txt" download
+                  >02 · Definir las tareas</a
+                ><a href="locales/es/prompts/03-move-it-to-my-apps.txt" download
+                  >03 · Usar mis apps</a
+                ><a href="locales/es/prompts/04-start-the-day.txt" download
+                  >04 · Empezar el día</a
+                ><a
+                  href="locales/es/prompts/05-rebalance-a-disrupted-week.txt"
+                  download
+                  >05 · Reequilibrar la semana</a
+                ><a href="locales/es/prompts/06-close-and-repeat.txt" download
+                  >06 · Cerrar y repetir</a
+                >
+              </div></noscript
+            >
+            <noscript
+              ><h3 lang="pt">Português</h3>
+              <div class="file-links" lang="pt">
+                <a href="locales/pt/prompts/01-plan-my-week.txt" download
+                  >01 · Planejar minha semana</a
+                ><a href="locales/pt/prompts/02-define-the-tasks.txt" download
+                  >02 · Definir as tarefas</a
+                ><a href="locales/pt/prompts/03-move-it-to-my-apps.txt" download
+                  >03 · Usar meus aplicativos</a
+                ><a href="locales/pt/prompts/04-start-the-day.txt" download
+                  >04 · Começar o dia</a
+                ><a
+                  href="locales/pt/prompts/05-rebalance-a-disrupted-week.txt"
+                  download
+                  >05 · Reequilibrar a semana</a
+                ><a href="locales/pt/prompts/06-close-and-repeat.txt" download
+                  >06 · Encerrar e repetir</a
+                >
+              </div></noscript
+            >
           </details>
         </div>
       </section>
@@ -491,11 +578,12 @@ Loading the prompt preview. You can also download the starter files below.</text
           <details>
             <summary>What happens to the context I enter?</summary>
             <p>
-              The customizer processes it in this browser tab. The page has no
-              account, analytics collector, persistent storage or AI connection.
-              Your host handles page requests under its own policies. Copying a
-              prompt into an AI shares that text with the provider you choose.
-              Leave out secrets and confidential information.
+              The customizer processes planning entries only in this tab. Only
+              your language and theme choices are saved on this device. The page
+              has no account, analytics collector or AI connection. Your host
+              handles page requests under its own policies. Copying a prompt
+              into an AI shares that text with the provider you choose. Leave
+              out secrets and confidential information.
             </p>
           </details>
           <details>
@@ -503,9 +591,8 @@ Loading the prompt preview. You can also download the starter files below.</text
             <p>
               Yes, for your personal or internal business planning. This
               permission covers the six prompt texts, not the rest of the
-              repository or third-party brands. Read the
-              <a href="USE-NOTES.txt">use notes</a>. AI output needs your
-              review; this kit promises no particular result.
+              repository or third-party brands. AI output needs your review;
+              this kit promises no particular result.
             </p>
           </details>
         </div>
@@ -526,19 +613,84 @@ Loading the prompt preview. You can also download the starter files below.</text
       </section>
     </main>
     <footer class="site-footer shell">
-      <div>
-        <a href="https://aekr.io" class="footer-brand"
-          >Built with <strong>AEKR</strong> <span aria-hidden="true">↗</span></a
-        >
-        <p>Weekly Leverage · A small, useful experiment.</p>
-      </div>
-      <div class="footer-links">
+      <div class="footer-identity">
         <a
-          href="https://github.com/edlopezpm-ops/Madness/tree/main/projects/weekly-leverage"
-          >Source on GitHub</a
-        ><a href="USE-NOTES.txt">Privacy &amp; use</a
-        ><a href="weekly-leverage-prompts.zip" download>Download the kit ↓</a>
+          href="https://aekr.io/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="aekr-banner"
+          aria-label="Built with AEKR (opens in a new tab)"
+        >
+          <svg
+            class="signature-mark"
+            viewBox="0 0 64 64"
+            aria-hidden="true"
+            focusable="false"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.2"
+            stroke-linecap="round"
+          >
+            <path d="M30 28C19 21 20 8 32 6c11 2 13 14 5 21" />
+            <path
+              class="signature-accent"
+              d="M36 29c7-11 21-8 22 4-2 11-15 12-21 4"
+            />
+            <path
+              d="M34 37c10 7 7 20-4 22-11-2-12-15-4-21M27 35c-7 10-20 7-21-4 2-11 15-12 21-4"
+            />
+            <circle cx="32" cy="32" r="6.5" />
+            <g fill="currentColor" stroke="none">
+              <circle cx="32" cy="6" r="2.8" />
+              <circle cx="58" cy="33" r="2.8" />
+              <circle cx="30" cy="59" r="2.8" />
+              <circle cx="6" cy="31" r="2.8" />
+              <circle cx="32" cy="32" r="3.2" />
+            </g>
+          </svg>
+          <span>Built with <strong>AEKR</strong></span>
+        </a>
+        <div class="social-links">
+          <a
+            href="https://www.instagram.com/__aekr/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram (opens in a new tab)"
+            ><svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.6"
+              aria-hidden="true"
+            >
+              <rect x="3.5" y="3.5" width="17" height="17" rx="5" />
+              <circle cx="12" cy="12" r="4" />
+              <circle
+                cx="17.4"
+                cy="6.7"
+                r=".8"
+                fill="currentColor"
+                stroke="none"
+              /></svg
+          ></a>
+          <a
+            href="https://x.com/__aekr"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="X @__aekr (opens in a new tab)"
+            ><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path
+                d="M18.9 2H22l-6.8 7.8L23.2 22h-6.3L12 14.6 5.5 22H2.4l8.2-9.4L.8 2h6.5l5.2 6.8L18.9 2Zm-1.1 18h1.7L6.4 3.9H4.6L17.8 20Z"
+              /></svg
+            ><span>@__aekr</span></a
+          >
+        </div>
       </div>
+      <nav class="footer-links" aria-label="AEKR policies">
+        <a href="https://aekr.io/terms.html">Terms of Service</a>
+        <a href="https://aekr.io/privacy.html">Privacy</a>
+        <a href="https://aekr.io/cookies.html">Cookies</a>
+      </nav>
     </footer>
   </body>
 </html>
