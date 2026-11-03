@@ -53,6 +53,8 @@ const files = [
   "app.js",
   "planner.mjs",
   "favicon.svg",
+  "social-card.png",
+  "aekr-mark.png",
   "prompts.json",
   "USE-NOTES.txt",
   "weekly-leverage-prompts.zip",
