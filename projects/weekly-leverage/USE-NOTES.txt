@@ -10,8 +10,9 @@ This is a planning aid. Review AI estimates, dates, time zones and outputs befor
 No particular productivity, financial or personal outcome is guaranteed. Applicable mandatory rights
 and obligations remain in force. This is not health, medical, legal or financial advice.
 
-The website does not connect to your apps or send your entries to an AI. Customization is temporary
-in your browser; no account, analytics collector or persistent browser storage is implemented.
+The website does not connect to your apps or send your entries to an AI. Planning context stays temporarily in this browser tab. Only language and manual theme preferences
+may be saved on this device, using weekly-leverage-language and weekly-leverage-theme. No plan content
+is persisted, and no account, cookies, analytics collector or AI connection is implemented.
 Your host processes page/file requests under its own policies. When you paste a prompt into an
 AI assistant or use a connector, that provider's terms, settings and data practices apply.
 Avoid secrets or confidential tasks; use anonymized labels. Preview and approve any external changes.

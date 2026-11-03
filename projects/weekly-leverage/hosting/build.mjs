@@ -27,11 +27,7 @@ async function requireSourceFile(original) {
   }
 }
 
-await requireSourceFile(join(source, "prompts.json"));
 await requireSourceFile(join(hosting, "_headers"));
-const prompts = JSON.parse(
-  await readFile(join(source, "prompts.json"), "utf8"),
-);
 const promptFiles = [
   "01-plan-my-week.txt",
   "02-define-the-tasks.txt",
@@ -40,25 +36,36 @@ const promptFiles = [
   "05-rebalance-a-disrupted-week.txt",
   "06-close-and-repeat.txt",
 ];
-if (
-  !Array.isArray(prompts) ||
-  prompts.length !== promptFiles.length ||
-  !prompts.every((prompt, index) => prompt.file === promptFiles[index])
-) {
-  throw new Error("Prompt manifest does not match the six reviewed filenames");
+const localeDirectories = ["", "locales/es/", "locales/pt/"];
+for (const prefix of localeDirectories) {
+  await requireSourceFile(join(source, prefix, "prompts.json"));
+  const prompts = JSON.parse(
+    await readFile(join(source, prefix, "prompts.json"), "utf8"),
+  );
+  if (
+    !Array.isArray(prompts) ||
+    prompts.length !== promptFiles.length ||
+    !prompts.every((prompt, index) => prompt.file === promptFiles[index])
+  ) {
+    throw new Error(
+      "Prompt manifest does not match the six reviewed filenames",
+    );
+  }
 }
 const files = [
   "index.html",
   "style.css",
   "app.js",
   "planner.mjs",
-  "favicon.svg",
+  "i18n.mjs",
+  "theme.js",
   "social-card.png",
   "aekr-mark.png",
-  "prompts.json",
-  "USE-NOTES.txt",
-  "weekly-leverage-prompts.zip",
-  ...promptFiles.map((file) => "prompts/" + file),
+  ...localeDirectories.flatMap((prefix) => [
+    prefix + "ui.json",
+    prefix + "prompts.json",
+    ...promptFiles.map((file) => prefix + "prompts/" + file),
+  ]),
 ];
 const allowed = new Set([
   "_headers",
