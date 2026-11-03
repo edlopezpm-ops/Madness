@@ -50,7 +50,7 @@ test("publication contains only public site assets under the dedicated path and 
       "weekly-leverage",
     ]);
     const files = await readdir(join(dist, "weekly-leverage"));
-    assert.equal(files.length, 9); // Eight top-level public files and the six-prompt directory.
+    assert.equal(files.length, 11); // Ten top-level public files and the six-prompt directory.
     assert.ok(
       !files.includes("README.md") &&
         !files.includes("hosting") &&
@@ -67,6 +67,10 @@ test("publication contains only public site assets under the dedicated path and 
     assert.match(
       await readFile(join(dist, "_headers"), "utf8"),
       /form-action 'none'/,
+    );
+    assert.match(
+      await readFile(join(dist, "_headers"), "utf8"),
+      /Cache-Control: public, max-age=300, no-transform/,
     );
   });
 });

@@ -93,14 +93,11 @@ textarea:focus {
   text-decoration: none;
 }
 .brand-mark {
-  display: grid;
-  place-items: center;
-  background: var(--accent);
-  color: var(--white);
-  width: 32px;
-  height: 32px;
-  font: italic 31px var(--serif);
-  padding-bottom: 5px;
+  display: block;
+  flex: 0 0 auto;
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
 }
 .wordmark-divider {
   color: #96958a;
@@ -854,9 +851,8 @@ h2 {
     margin: 0 4px;
   }
   .brand-mark {
-    width: 27px;
-    height: 27px;
-    font-size: 26px;
+    width: 40px;
+    height: 40px;
   }
   .hero {
     grid-template-columns: 1fr;
