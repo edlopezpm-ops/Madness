@@ -2,6 +2,11 @@
 
 Local Python experiments that generate monohull and catamaran guide geometry through FreeCAD's APIs.
 
+<!-- (kommiBo) Owner-authorized standalone weekly planning subproject. -->
+## Subprojects
+
+- **[Weekly Leverage](projects/weekly-leverage/README.md)**: a standalone HTML toolkit with six downloadable prompts for planning a realistic week with your own AI and apps. Built with AEKR. The CAD experiments below remain separate.
+
 ## Status
 
 The models are visual experiments, not certified naval architecture, fabrication, or safety designs. Both scripts create guide curves in millimeters and can run interactively or through the headless FreeCAD command runtime.

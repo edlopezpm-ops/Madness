@@ -9,6 +9,7 @@ No root project license has been selected. There is no general grant to reuse th
 | Component | Evidence and licensing boundary |
 |---|---|
 | Hull scripts and engineering notes | No root project license; public visibility is not an open-source grant. |
+| Weekly Leverage prompt texts | Owner-requested downloadable planning deliverable; personal/internal business use and adaptation permitted only for the six prompt texts under [the scoped use notes](../projects/weekly-leverage/USE-NOTES.txt). Website source and unrelated material are not included in that permission. |
 | `FreeCAD`, `Draft`, `Part`, optional `FreeCADGui` | Imports from an external FreeCAD installation; its distribution carries its own licenses and third-party notices. |
 | User-saved CAD or exported geometry | Review source ownership and embedded metadata independently; do not infer a new license from a file extension. |
 

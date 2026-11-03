@@ -14,6 +14,19 @@ professional delivery or hosted service. Review the actual deployment before rel
 on it; source visibility is not evidence of a production service or compliance certification.
 
 <!-- (kommiBo) User responsibility, outcome limits and non-waivable rights. -->
+## Weekly Leverage subproject
+
+[Weekly Leverage](projects/weekly-leverage/README.md) provides planning prompts, not an
+AI service or a calendar/task integration. Review generated schedules, estimates, dates,
+capacity and provider permissions before relying on them. It guarantees no particular
+productivity, personal or business outcome and provides no professional health, legal or
+financial advice. Applicable mandatory rights and obligations remain in force.
+
+Visitors may use and adapt its six prompt texts for personal or internal business planning,
+as scoped in its [use notes](projects/weekly-leverage/USE-NOTES.txt). That narrow permission
+does not license the site source, unrelated repository material or third-party marks.
+The repository still has no general project license. Existing rights are preserved.
+
 ## Your responsibility to understand and validate use
 
 Before running or adapting the project, read its purpose, requirements, instructions and
