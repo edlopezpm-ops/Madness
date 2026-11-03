@@ -55,6 +55,7 @@
     <script src="theme.js"></script>
     <link rel="stylesheet" href="style.css" />
     <script type="module" src="app.js"></script>
+    <script type="module" src="usage.js"></script>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -600,12 +601,7 @@ Loading the prompt preview. You can also download the starter files below.</text
           <details>
             <summary>What happens to the context I enter?</summary>
             <p>
-              The customizer processes planning entries only in this tab. Only
-              your language and theme choices are saved on this device. The page
-              has no account, analytics collector or AI connection. Your host
-              handles page requests under its own policies. Copying a prompt
-              into an AI shares that text with the provider you choose. Leave
-              out secrets and confidential information.
+              The customizer processes planning entries only in this tab. Language, theme and optional statistics preferences can be saved on this device. Statistics stay off until you allow them below. No planning text is sent. Copying a prompt into an AI shares that text with the provider you choose. Leave out secrets and confidential information.
             </p>
           </details>
           <details>
@@ -634,6 +630,25 @@ Loading the prompt preview. You can also download the starter files below.</text
         >
       </section>
     </main>
+    <section class="shell weekly-metrics" aria-label="Optional visit statistics">
+      <details id="weekly-metrics-controls">
+        <summary>Optional visit statistics</summary>
+        <p>Help improve Weekly Leverage with one optional page-view count per visible document. We keep separate daily totals for language, approximate country, broad device class and fixed referrer category for 30 days. These are not unique people or complete traffic counts.</p>
+        <p>No cookies, visitor IDs, raw IP addresses, full referrers, raw browser strings, planning entries or prompt text are stored. This permission covers product improvement only. Your choice is saved on this device for 30 days. Turning it off stops future counts; past totals cannot be linked back to you.</p>
+        <p role="status" aria-live="polite">
+          <span data-metrics-state="off">Optional statistics are off.</span>
+          <span data-metrics-state="accepted" hidden>Optional statistics are allowed. You can turn them off here.</span>
+          <span data-metrics-state="signal" hidden>Your browser privacy signal keeps optional statistics off.</span>
+          <span data-metrics-state="failed" hidden>Your choice could not be saved. Optional statistics stay off.</span>
+          <span data-metrics-state="paused" hidden>Optional statistics are paused by the site owner.</span>
+        </p>
+        <div class="metrics-actions">
+          <button type="button" class="small-button" data-metrics-accept disabled>Allow optional statistics</button>
+          <button type="button" class="small-button" data-metrics-reject disabled>Turn off optional statistics</button>
+        </div>
+        <noscript><p>JavaScript is required for optional statistics. No view is counted here.</p></noscript>
+      </details>
+    </section>
     <footer class="site-footer shell">
       <div class="footer-identity">
         <a
