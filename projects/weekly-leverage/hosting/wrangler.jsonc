@@ -1,0 +1,17 @@
+{
+  // (kommiBo) Asset-only public deployment, bounded to the Weekly Leverage paths.
+  "name": "aekr-weekly-leverage",
+  "compatibility_date": "2026-11-03",
+  "workers_dev": false,
+  "preview_urls": false,
+  "assets": {
+    "directory": "./dist",
+    "html_handling": "auto-trailing-slash",
+    "not_found_handling": "none",
+  },
+  "routes": [
+    { "pattern": "aekr.io/weekly-leverage", "zone_name": "aekr.io" },
+    { "pattern": "aekr.io/weekly-leverage/*", "zone_name": "aekr.io" },
+  ],
+  "observability": { "enabled": false },
+}
