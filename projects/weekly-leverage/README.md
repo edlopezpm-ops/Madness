@@ -4,6 +4,8 @@
 
 Plan once. Make room to live. Six planning prompts for the AI assistant and apps a visitor already uses.
 
+Public entry point: **[aekr.io/weekly-leverage/](https://aekr.io/weekly-leverage/)**. No sign-in is implemented.
+
 ## The experience
 
 - Six stages: weekly plan, task definition, app handoff, daily start, rebalance and weekly review.
@@ -20,7 +22,7 @@ From this directory:
 
 ```sh
 python3 -m http.server 4783 --bind 127.0.0.1
-node --test tests/planner.test.mjs
+node --test tests/*.test.mjs
 python3 -m unittest discover -s tests -p 'test_*.py'
 ```
 
@@ -34,7 +36,26 @@ Browser verification should cover all six prompt choices, custom capacity, clipb
 
 `prompts.json`, individual prompt files and ZIP copies must agree. The tests check that contract. The ZIP contains the six generic starters and use notes; the single-file browser download includes the visitor's optional context.
 
-This is a subproject of `edlopezpm-ops/Madness`. Its public hosting URL must be confirmed after an actual deployment. GitHub Pages always uses an internal Actions workflow, including branch-based publication; a previous no-Actions instruction must be resolved before enabling Pages. No custom workflow is included here.
+This is a subproject of `edlopezpm-ops/Madness`, published as a standalone static application at `https://aekr.io/weekly-leverage/` through Cloudflare Workers Static Assets. GitHub Pages is not used. The new asset-only Worker has no server script, account service, app connector or database binding. Its two routes cover the bare entry path and its slash-delimited subtree; they do not replace the aekr.io homepage or other product routes.
+
+### Deploy and recover
+
+From this directory, with an already authorized Cloudflare CLI session:
+
+```sh
+node hosting/build.mjs
+npx wrangler@4.157.0 deploy --config hosting/wrangler.jsonc --dry-run
+npx wrangler@4.157.0 deploy --config hosting/wrangler.jsonc
+```
+
+Use the intended Cloudflare account. Do not add credentials to the repository. The build copies only the 14 public assets into an ignored `hosting/dist/weekly-leverage/` directory and adds the scoped response headers. It refuses unexpected preexisting output files rather than publishing or deleting them. The deployment has no custom GitHub Actions workflow and needs no model API.
+
+The route without a trailing slash redirects to the public slash URL. Share the slash URL, especially with query parameters: Cloudflare's exact bare-path route does not match query strings. `hosting/_headers` applies only to the new static application and sets CSP, HSTS and framing controls. It does not change headers for other aekr.io applications.
+
+Record the actual deployed version, routes and live browser/download evidence before claiming publication. On a later update, retain the prior version ID and use the provider rollback command for this Worker only. For the first release, recovery is removal of only the two newly created route IDs from the saved deployment receipt; never delete unrelated routes or change the existing homepage Worker. Keep the source and deployment configuration available for a reviewed corrective release.
+
+This uses the existing vendor-managed hosting path. There is no model billing or new paid-service plan. Cloudflare documents [static asset requests and storage](https://developers.cloudflare.com/workers/static-assets/billing-and-limitations/) separately from billable Worker-script execution; this deployment has no script. Existing account/provider policies still apply.
+
 
 ## Use and permissions
 

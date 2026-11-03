@@ -5,7 +5,7 @@ Local Python experiments that generate monohull and catamaran guide geometry thr
 <!-- (kommiBo) Owner-authorized standalone weekly planning subproject. -->
 ## Subprojects
 
-- **[Weekly Leverage](projects/weekly-leverage/README.md)**: a standalone HTML toolkit with six downloadable prompts for planning a realistic week with your own AI and apps. Built with AEKR. The CAD experiments below remain separate.
+- **[Weekly Leverage](https://aekr.io/weekly-leverage/)**: a standalone HTML toolkit with six downloadable prompts for planning a realistic week with your own AI and apps. Built with AEKR. [Source and operation notes](projects/weekly-leverage/README.md). The CAD experiments below remain separate.
 
 ## Status
 

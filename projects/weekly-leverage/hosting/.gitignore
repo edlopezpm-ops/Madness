@@ -1,0 +1,3 @@
+# (kommiBo) Generated publication files and local provider state stay out of Git.
+dist/
+.wrangler/
