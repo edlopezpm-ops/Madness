@@ -113,7 +113,7 @@ class PackageTests(unittest.TestCase):
                 if not any(tag in self.stack for tag in ('head','script','style','textarea','noscript')): self.add(value)
         parser = Copy(); parser.feed((ROOT / 'index.html').read_text())
         english = json.loads((ROOT / 'ui.json').read_text())
-        self.assertEqual(parser.copy - set(english) - {'English','Español','Português','EN','@__aekr'}, set())
+        self.assertEqual(parser.copy - set(english) - {'English','Español','Português','EN','ES','PT','Auto','@__aekr'}, set())
 
     def test_only_prompt_downloads_and_central_policies_are_exposed_in_footer(self):
         class Links(HTMLParser):

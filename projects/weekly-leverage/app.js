@@ -63,15 +63,18 @@ function translatePage() {
     "aria-label",
     t("Choose language") + " (" + language.toUpperCase() + ")",
   );
-  for (const button of document.querySelectorAll("[data-language]"))
-    button.setAttribute(
-      "aria-pressed",
-      String(button.dataset.language === language),
-    );
+  for (const button of document.querySelectorAll("[data-language]")) {
+    const active = button.dataset.language === language;
+    button.hidden = active;
+    button.setAttribute("aria-pressed", String(active));
+  }
   document
     .querySelector('#language-options [role="group"]')
     .setAttribute("aria-label", t("Language options"));
-  document.querySelector("#system-theme").textContent = t("Use system theme");
+  document
+    .querySelector("#system-theme")
+    .setAttribute("aria-label", t("Use system theme"));
+  document.querySelector("#system-theme").title = t("Use system theme");
   const theme = document.querySelector("#theme-toggle");
   theme.dataset.darkLabel = t("Switch to dark mode");
   theme.dataset.lightLabel = t("Switch to light mode");
