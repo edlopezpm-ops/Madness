@@ -137,3 +137,18 @@ test("manifest cannot turn an unrelated source file into a public prompt", async
     assert.match(result.stderr, /does not match the six reviewed filenames/);
   });
 });
+
+test("publication refuses a symlinked header input before copying its contents", async () => {
+  await fixture(async (root) => {
+    const synthetic = join(root, "outside-headers.txt");
+    await writeFile(
+      synthetic,
+      "/weekly-leverage/*\n  X-Fixture-Private: synthetic\n",
+    );
+    await rm(join(root, "hosting/_headers"));
+    await symlink(synthetic, join(root, "hosting/_headers"));
+    const result = build(root);
+    assert.notEqual(result.status, 0);
+    assert.match(result.stderr, /Expected a regular in-scope source asset/);
+  });
+});

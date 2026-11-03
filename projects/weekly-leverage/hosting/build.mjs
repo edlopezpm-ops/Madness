@@ -14,6 +14,21 @@ import { fileURLToPath } from "node:url";
 const hosting = await realpath(dirname(fileURLToPath(import.meta.url)));
 const source = resolve(hosting, "..");
 const destination = join(hosting, "dist");
+
+async function requireSourceFile(original) {
+  if (
+    !original.startsWith(source + "/") ||
+    !(await lstat(original)).isFile() ||
+    (await realpath(original)) !== original
+  ) {
+    throw new Error(
+      "Expected a regular in-scope source asset: " + relative(source, original),
+    );
+  }
+}
+
+await requireSourceFile(join(source, "prompts.json"));
+await requireSourceFile(join(hosting, "_headers"));
 const prompts = JSON.parse(
   await readFile(join(source, "prompts.json"), "utf8"),
 );
@@ -77,13 +92,7 @@ for (const file of await existingFiles(destination)) {
 }
 for (const file of files) {
   const original = resolve(source, file);
-  if (
-    !original.startsWith(source + "/") ||
-    !(await lstat(original)).isFile() ||
-    (await realpath(original)) !== original
-  ) {
-    throw new Error("Expected a regular in-scope source asset: " + file);
-  }
+  await requireSourceFile(original);
   const output = join(destination, "weekly-leverage", file);
   await mkdir(dirname(output), { recursive: true });
   await copyFile(original, output);
