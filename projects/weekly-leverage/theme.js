@@ -17,6 +17,8 @@
     root.dataset.themePreference = manual ? theme : "system";
     const meta = document.querySelector('meta[name="theme-color"]');
     if (meta) meta.content = theme === "dark" ? "#181b17" : "#f4f0e7";
+    const automatic = document.querySelector("#system-theme");
+    if (automatic) automatic.hidden = !manual;
     const button = document.querySelector("#theme-toggle");
     if (button) {
       button.hidden = false;
