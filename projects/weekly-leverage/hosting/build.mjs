@@ -59,6 +59,7 @@ const files = [
   "planner.mjs",
   "i18n.mjs",
   "theme.js",
+  "usage.js",
   "social-card.png",
   "aekr-mark.png",
   ...localeDirectories.flatMap((prefix) => [

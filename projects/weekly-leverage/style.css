@@ -1229,3 +1229,11 @@ html[data-theme="dark"] .sun-icon {
     flex-wrap: wrap;
   }
 }
+
+/* (kommiBo) Bounded opt-in disclosure, using the existing page tokens. */
+.weekly-metrics { margin-block: 1.5rem; }
+.weekly-metrics details { border-top: 1px solid var(--line); padding-block: 1rem; }
+.weekly-metrics summary { cursor: pointer; }
+.weekly-metrics p { max-width: 75ch; font-size: .95rem; line-height: 1.6; }
+.metrics-actions { display: flex; flex-wrap: wrap; gap: .75rem; }
+.metrics-actions button { min-height: 44px; max-width: 100%; white-space: normal; }

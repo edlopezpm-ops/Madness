@@ -156,8 +156,8 @@ class PackageTests(unittest.TestCase):
         parser.feed((ROOT / 'index.html').read_text())
         self.assertTrue(parser.context_disabled)
 
-    def test_public_scripts_have_no_collection_cookie_or_external_request_paths(self):
-        for filename in ('app.js','planner.mjs','i18n.mjs','theme.js'):
+    def test_planning_scripts_remain_separate_from_optional_aggregate_measurement(self):
+        for filename in ('app.js','planner.mjs','i18n.mjs','theme.js','usage.js'):
             source = (ROOT / filename).read_text()
             for forbidden in ('document.cookie','sessionStorage','indexedDB','sendBeacon','XMLHttpRequest','innerHTML','eval('):
                 self.assertNotIn(forbidden, source)
