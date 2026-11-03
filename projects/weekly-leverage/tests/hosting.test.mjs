@@ -50,15 +50,31 @@ test("publication contains only public site assets under the dedicated path and 
       "weekly-leverage",
     ]);
     const files = await readdir(join(dist, "weekly-leverage"));
-    assert.equal(files.length, 11); // Ten top-level public files and the six-prompt directory.
+    assert.equal(files.length, 12); // Ten top-level files, prompt files and locale directories.
     assert.ok(
       !files.includes("README.md") &&
         !files.includes("hosting") &&
         !files.includes("tests"),
     );
-    assert.deepEqual(
-      await readFile(join(dist, "weekly-leverage/weekly-leverage-prompts.zip")),
-      await readFile(join(root, "weekly-leverage-prompts.zip")),
+    for (const language of ["es", "pt"]) {
+      assert.deepEqual(
+        await readFile(
+          join(
+            dist,
+            "weekly-leverage/locales/" +
+              language +
+              "/prompts/01-plan-my-week.txt",
+          ),
+        ),
+        await readFile(
+          join(root, "locales/" + language + "/prompts/01-plan-my-week.txt"),
+        ),
+      );
+    }
+    assert.ok(
+      !files.includes("weekly-leverage-prompts.zip") &&
+        !files.includes("USE-NOTES.txt") &&
+        !files.includes("favicon.svg"),
     );
     assert.deepEqual(
       await readFile(join(dist, "weekly-leverage/app.js")),

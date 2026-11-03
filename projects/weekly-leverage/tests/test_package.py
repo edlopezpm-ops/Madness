@@ -5,7 +5,7 @@ from urllib.parse import unquote, urlsplit
 import json
 import struct
 import unittest
-import zipfile
+import re
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -78,16 +78,64 @@ class PackageTests(unittest.TestCase):
         self.assertEqual(struct.unpack('>II', image[16:24]), (1200, 630))
         self.assertLess(len(image), 5_000_000)
 
-    def test_individual_downloads_json_and_zip_match_exactly(self):
-        prompts = json.loads((ROOT / 'prompts.json').read_text())
-        self.assertEqual(len(prompts), 6)
-        with zipfile.ZipFile(ROOT / 'weekly-leverage-prompts.zip') as pack:
-            self.assertEqual(len(pack.namelist()), 7)
-            self.assertEqual(pack.read('weekly-leverage/START-HERE.txt'), (ROOT / 'USE-NOTES.txt').read_bytes())
-            for prompt in prompts:
-                content = (ROOT / 'prompts' / prompt['file']).read_bytes()
-                self.assertEqual(content.decode('utf-8'), prompt['text'])
-                self.assertEqual(content, pack.read('weekly-leverage/' + prompt['file']))
+    def test_individual_downloads_match_all_three_language_manifests(self):
+        english = json.loads((ROOT / 'prompts.json').read_text())
+        english_ui = json.loads((ROOT / 'ui.json').read_text())
+        for prefix in ['', 'locales/es/', 'locales/pt/']:
+            base = ROOT / prefix
+            prompts = json.loads((base / 'prompts.json').read_text())
+            ui = json.loads((base / 'ui.json').read_text())
+            self.assertEqual(set(ui), set(english_ui))
+            self.assertEqual(len(prompts), 6)
+            for key, value in ui.items():
+                self.assertTrue(value.strip())
+                self.assertEqual(re.findall(r'\{\w+\}', key), re.findall(r'\{\w+\}', value), key)
+            for original, prompt in zip(english, prompts):
+                self.assertEqual(prompt['id'], original['id'])
+                self.assertEqual(prompt['file'], original['file'])
+                self.assertEqual((base / 'prompts' / prompt['file']).read_text(), prompt['text'])
+                self.assertEqual(re.findall(r'\d+', prompt['text']), re.findall(r'\d+', original['text']))
+
+    def test_all_visible_copy_and_accessible_attributes_have_translations(self):
+        class Copy(HTMLParser):
+            def __init__(self):
+                super().__init__(); self.stack = []; self.copy = set()
+            def add(self, value):
+                value = ' '.join(value.split())
+                if any(c.isalpha() for c in value): self.copy.add(value)
+            def handle_starttag(self, tag, attrs):
+                if tag not in ('meta','link','input','img','br','hr','path','circle','rect'): self.stack.append(tag)
+                for key, value in attrs:
+                    if key in ('aria-label','placeholder'): self.add(value)
+            def handle_endtag(self, tag):
+                if tag in self.stack: self.stack = self.stack[:len(self.stack)-1-self.stack[::-1].index(tag)]
+            def handle_data(self, value):
+                if not any(tag in self.stack for tag in ('head','script','style','textarea','noscript')): self.add(value)
+        parser = Copy(); parser.feed((ROOT / 'index.html').read_text())
+        english = json.loads((ROOT / 'ui.json').read_text())
+        self.assertEqual(parser.copy - set(english) - {'English','Español','Português','EN','@__aekr'}, set())
+
+    def test_only_prompt_downloads_and_central_policies_are_exposed_in_footer(self):
+        class Links(HTMLParser):
+            def handle_starttag(self, tag, attrs):
+                attrs = dict(attrs)
+                if tag == 'a':
+                    if 'download' in attrs: self.assert_download(attrs['href'])
+                    if attrs.get('target') == '_blank':
+                        self.assert_relation(attrs.get('rel',''))
+        parser = Links()
+        parser.assert_download = lambda href: self.assertRegex(href, r'^(locales/(es|pt)/)?prompts/[a-z0-9-]+\.txt$')
+        parser.assert_relation = lambda rel: self.assertTrue({'noopener','noreferrer'} <= set(rel.split()))
+        source = (ROOT / 'index.html').read_text(); parser.feed(source)
+        self.assertNotIn('github.com', source)
+        self.assertNotIn('.zip', source)
+        for page in ['terms.html','privacy.html','cookies.html']:
+            self.assertIn('https://aekr.io/' + page, source)
+        self.assertIn('https://x.com/__aekr', source)
+        self.assertIn('https://www.instagram.com/__aekr/', source)
+        self.assertIn('href="aekr-mark.png" type="image/png"', source)
+        self.assertNotIn('No account. No new app.', source)
+        self.assertNotIn('Choose a moment. Add a little context.', source)
 
     def test_local_page_links_and_anchors_resolve(self):
         parser = PageLinks()
@@ -108,14 +156,17 @@ class PackageTests(unittest.TestCase):
         parser.feed((ROOT / 'index.html').read_text())
         self.assertTrue(parser.context_disabled)
 
-    def test_published_scripts_have_no_persistent_storage_or_external_request_endpoints(self):
-        for filename in ('app.js', 'planner.mjs'):
+    def test_public_scripts_have_no_collection_cookie_or_external_request_paths(self):
+        for filename in ('app.js','planner.mjs','i18n.mjs','theme.js'):
             source = (ROOT / filename).read_text()
-            for forbidden in ('localStorage', 'sessionStorage', 'indexedDB', 'sendBeacon', 'XMLHttpRequest'):
+            for forbidden in ('document.cookie','sessionStorage','indexedDB','sendBeacon','XMLHttpRequest','innerHTML','eval('):
                 self.assertNotIn(forbidden, source)
         source = (ROOT / 'app.js').read_text()
         self.assertEqual(source.count('fetch('), 1)
-        self.assertRegex(source, r'''new URL\(["']\./prompts\.json["'],\s*import\.meta\.url\)''')
+        self.assertIn('new URL(prefix + file, import.meta.url)', source)
+        self.assertIn('["ui.json", "prompts.json"]', source)
+        self.assertIn('weekly-leverage-language', source)
+        self.assertNotIn('localStorage', (ROOT / 'planner.mjs').read_text())
 
 
 if __name__ == '__main__':
