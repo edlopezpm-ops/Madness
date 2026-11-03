@@ -7,7 +7,8 @@ Reviewed 2026-11-01.
 ## Scope and responsibility
 
 AEKR maintains this project's notices and is the contact for questions at
-[aekr@aekr.io](mailto:aekr@aekr.io). This notice covers local FreeCAD monohull and catamaran guide-geometry experiments.
+[aekr@aekr.io](mailto:aekr@aekr.io). This notice covers local FreeCAD monohull and catamaran guide-geometry experiments
+and the separate Weekly Leverage prompt toolkit described below.
 It does not claim a new legal entity or apply the aekr.io website's analytics,
 questionnaire, browser-data email service or retention periods to this repository.
 
@@ -24,6 +25,22 @@ certify their network behavior or the contents of every user-created model.
 
 Source evidence: [monohull generator](HullSample.py), [catamaran generator](CatHullSample.py), [geometry validator](tests/validate_models.py). This is a source review, not a guarantee about every
 dependency, host, historical artifact or future deployment.
+
+<!-- (kommiBo) Browser-local processing in the new owner-requested subproject. -->
+## Weekly Leverage subproject
+
+[Weekly Leverage](projects/weekly-leverage/README.md) is a separate static prompt toolkit.
+Its customizer holds optional planning context temporarily in the current browser tab and
+uses it to prepare text for copying or download. It implements no analytics collector,
+account, persistent browser storage, model API call or calendar/task connector. Its only
+application fetch loads the bundled prompt JSON from the same site.
+
+Copying the result into an AI assistant is a separate disclosure to the provider chosen
+by the visitor. External connectors, if available there, require their own authorization.
+Use anonymized task labels and avoid confidential data. Customized downloaded files include
+the entered context and remain in the visitor's download location until they remove them.
+The generic ZIP contains no visitor context. Hosting providers process page and download
+requests under their own policies; browser-local processing is not a zero-log claim.
 
 ## Hosting, requests and retention
 
