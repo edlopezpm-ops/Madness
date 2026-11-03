@@ -1,0 +1,21 @@
+WEEKLY LEVERAGE — USE NOTES
+Built with AEKR · https://aekr.io
+
+Use and adapt the six prompt texts for your personal or internal business planning, including
+copying them into the AI assistant you choose. This permission is limited to prompts/*.txt
+and the same prompt text included in this pack; it is not a license for the rest of Madness,
+the website source, third-party products or AEKR marks. Existing rights remain unchanged.
+
+This is a planning aid. Review AI estimates, dates, time zones and outputs before relying on them.
+No particular productivity, financial or personal outcome is guaranteed. Applicable mandatory rights
+and obligations remain in force. This is not health, medical, legal or financial advice.
+
+The website does not connect to your apps or send your entries to an AI. Customization is temporary
+in your browser; no account, analytics collector or persistent browser storage is implemented.
+Your host processes page/file requests under its own policies. When you paste a prompt into an
+AI assistant or use a connector, that provider's terms, settings and data practices apply.
+Avoid secrets or confidential tasks; use anonymized labels. Preview and approve any external changes.
+
+Start with 01-plan-my-week.txt. Then use the other prompts only when helpful.
+Defaults (editable): 20% buffer, up to 50-minute focus / 10-minute breaks counted inside capacity,
+one main outcome per day, a brief daily close and weekly review. No new app or paid model API needed.
