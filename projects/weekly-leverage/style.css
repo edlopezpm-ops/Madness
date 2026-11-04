@@ -29,7 +29,7 @@ body {
   background: var(--paper);
   color: var(--ink);
   font-family: var(--sans);
-  font-size: 16.5px;
+  font-size: 18.15px;
   line-height: 1.55;
 }
 a {
@@ -117,7 +117,7 @@ textarea:focus {
 .site-header nav {
   display: flex;
   gap: 28px;
-  font-size: 14.3px;
+  font-size: 15.73px;
 }
 .site-header nav a {
   text-decoration: none;
@@ -134,7 +134,7 @@ textarea:focus {
 }
 .eyebrow,
 .section-kicker {
-  font-size: 11px;
+  font-size: 12.1px;
   letter-spacing: 2px;
   font-weight: 700;
 }
@@ -167,13 +167,13 @@ h1 em {
   font-weight: 400;
 }
 .hero-intro {
-  font-size: 20.9px;
+  font-size: 22.99px;
   line-height: 1.5;
   margin-bottom: 13px;
 }
 .hero-detail {
   max-width: 380px;
-  font-size: 15.4px;
+  font-size: 16.94px;
   line-height: 1.7;
   color: var(--muted);
   margin-bottom: 28px;
@@ -192,7 +192,7 @@ h1 em {
   text-decoration: none;
   border: 1px solid var(--ink);
   padding: 14px 19px;
-  font-size: 13.2px;
+  font-size: 14.52px;
   font-weight: 700;
   border-radius: 2px;
   min-height: 46px;
@@ -227,7 +227,7 @@ h1 em {
   gap: 15px;
   border-bottom: 1px solid var(--line);
   padding-bottom: 17px;
-  font-size: 8.8px;
+  font-size: 9.68px;
   letter-spacing: 1.7px;
 }
 .paper-number {
@@ -250,7 +250,7 @@ h1 em {
   border-top: 1px solid var(--line);
 }
 .week-day > span {
-  font-size: 8.8px;
+  font-size: 9.68px;
   letter-spacing: 1px;
   width: 35px;
   flex-shrink: 0;
@@ -259,7 +259,7 @@ h1 em {
   display: flex;
   align-items: center;
   padding: 9px 10px;
-  font-size: 9.9px;
+  font-size: 10.89px;
   white-space: nowrap;
   border-radius: 2px;
   min-height: 33px;
@@ -294,7 +294,7 @@ h1 em {
 .weekend {
   padding-block: 14px;
   gap: 16px;
-  font: italic 15.4px var(--serif);
+  font: italic 16.94px var(--serif);
 }
 .weekend > span {
   font-family: var(--sans);
@@ -307,7 +307,7 @@ h1 em {
   gap: 10px;
   border-top: 1px solid var(--line);
   padding-top: 15px;
-  font-size: 8.8px;
+  font-size: 9.68px;
   color: var(--muted);
 }
 .paper-bottom span {
@@ -327,7 +327,7 @@ h1 em {
   border-radius: 50%;
 }
 .illustration-caption {
-  font: 11px var(--sans);
+  font: 12.1px var(--sans);
   text-align: right;
   color: var(--muted);
   margin: 14px 0 0;
@@ -347,7 +347,7 @@ h2 {
   gap: 52px;
 }
 .step-number {
-  font-size: 11px;
+  font-size: 12.1px;
   color: var(--accent);
   letter-spacing: 2px;
 }
@@ -357,7 +357,7 @@ h2 {
   margin: 14px 0 9px;
 }
 .principles p {
-  font-size: 14.3px;
+  font-size: 15.73px;
   color: var(--muted);
   margin: 0;
   max-width: 290px;
@@ -411,7 +411,7 @@ h2 {
   border-color: var(--ink);
 }
 .choice-index {
-  font: italic 18.7px var(--serif);
+  font: italic 20.57px var(--serif);
   opacity: 0.65;
 }
 .prompt-choice strong {
@@ -421,7 +421,7 @@ h2 {
 }
 .prompt-choice small {
   display: block;
-  font-size: 11px;
+  font-size: 12.1px;
   opacity: 0.72;
   margin-top: 2px;
 }
@@ -442,7 +442,7 @@ h2 {
   gap: 15px;
 }
 .workspace-tag {
-  font-size: 8.8px;
+  font-size: 9.68px;
   color: var(--accent);
   letter-spacing: 1.6px;
   font-weight: 700;
@@ -454,14 +454,14 @@ h2 {
 }
 .time-pill {
   border: 1px solid var(--line);
-  font-size: 9.9px;
+  font-size: 10.89px;
   padding: 4px 8px;
   white-space: nowrap;
   border-radius: 20px;
   color: var(--muted);
 }
 .prompt-description {
-  font-size: 13.2px;
+  font-size: 14.52px;
   color: var(--muted);
   margin: 12px 0 22px;
 }
@@ -472,12 +472,12 @@ h2 {
   margin-bottom: 23px;
 }
 .customize-panel summary {
-  font-size: 13.2px;
+  font-size: 14.52px;
   font-weight: 700;
   cursor: pointer;
 }
 .customize-panel summary > span {
-  font-size: 11px;
+  font-size: 12.1px;
   color: var(--muted);
   font-weight: 400;
   margin-left: 8px;
@@ -489,7 +489,7 @@ h2 {
   margin-top: 18px;
 }
 .field-grid label {
-  font-size: 11px;
+  font-size: 12.1px;
   display: flex;
   flex-direction: column;
   gap: 5px;
@@ -506,7 +506,7 @@ h2 {
   padding: 9px 10px;
   border-radius: 2px;
   min-width: 0;
-  font-size: 13.2px;
+  font-size: 14.52px;
 }
 .field-grid textarea {
   resize: vertical;
@@ -526,7 +526,7 @@ h2 {
   padding-right: 3px;
 }
 .input-wrap > span {
-  font-size: 11px;
+  font-size: 12.1px;
   color: var(--muted);
   padding-right: 11px;
 }
@@ -538,7 +538,7 @@ h2 {
   margin-top: 16px;
 }
 .form-bottom p {
-  font-size: 11px;
+  font-size: 12.1px;
   color: var(--muted);
   margin: 0;
   max-width: 245px;
@@ -548,7 +548,7 @@ h2 {
   border: 1px solid var(--muted);
   border-radius: 2px;
   padding: 8px 10px;
-  font-size: 11px;
+  font-size: 12.1px;
   white-space: nowrap;
   color: var(--ink);
 }
@@ -556,7 +556,7 @@ h2 {
   background: var(--soft);
 }
 .input-note {
-  font-size: 9.9px;
+  font-size: 10.89px;
   line-height: 1.6;
   color: var(--muted);
   margin: 12px 0 0;
@@ -566,12 +566,12 @@ h2 {
   justify-content: space-between;
   gap: 12px;
   align-items: center;
-  font-size: 8.8px;
+  font-size: 9.68px;
   letter-spacing: 1px;
   margin-bottom: 10px;
 }
 .output-heading span {
-  font-size: 9.9px;
+  font-size: 10.89px;
   letter-spacing: 0;
   color: var(--muted);
 }
@@ -585,7 +585,7 @@ h2 {
   color: var(--ink);
   padding: 19px;
   font:
-    12.1px/1.8 "Courier New",
+    13.31px/1.8 "Courier New",
     monospace;
   border-radius: 2px;
   tab-size: 2;
@@ -600,10 +600,10 @@ h2 {
 .output-actions .button {
   padding: 11px 14px;
   min-height: 42px;
-  font-size: 11px;
+  font-size: 12.1px;
 }
 .reset-button {
-  font-size: 11px;
+  font-size: 12.1px;
   border: 0;
   padding: 10px 0;
   background: transparent;
@@ -613,15 +613,19 @@ h2 {
   text-underline-offset: 3px;
 }
 .status-line {
-  font-size: 11px;
+  font-size: 12.1px;
   color: var(--muted);
   min-height: 16px;
   margin: 10px 0 0;
 }
 .plain-files {
-  font-size: 12.1px;
+  font-size: 13.31px;
   color: var(--muted);
   margin-top: 23px;
+}
+/* Keep starter-language headings at their prior 12.1px × 1.17 size. */
+.plain-files h3 {
+  font-size: calc(12.1px * 1.17);
 }
 .plain-files summary {
   cursor: pointer;
@@ -642,7 +646,7 @@ h2 {
   margin-bottom: 19px;
 }
 .questions-intro {
-  font-size: 13.2px;
+  font-size: 14.52px;
   line-height: 1.8;
   color: var(--muted);
 }
@@ -654,7 +658,7 @@ h2 {
   border-bottom: 1px solid var(--line);
 }
 .faq-list summary {
-  font-size: 14.3px;
+  font-size: 15.73px;
   cursor: pointer;
   list-style: none;
   display: flex;
@@ -675,7 +679,7 @@ h2 {
   content: "−";
 }
 .faq-list p {
-  font-size: 13.2px;
+  font-size: 14.52px;
   line-height: 1.8;
   margin: 14px 23px 0 0;
   color: var(--muted);
@@ -724,11 +728,11 @@ h2 {
   display: flex;
   align-items: start;
   gap: 23px;
-  font-size: 11px;
+  font-size: 12.1px;
   padding-top: 3px;
 }
 .no-script {
-  font-size: 13.2px;
+  font-size: 14.52px;
   padding: 12px;
   background: var(--soft);
 }
@@ -761,7 +765,7 @@ h2 {
     font-size: 34.1px;
   }
   .block {
-    font-size: 8.8px;
+    font-size: 9.68px;
     padding: 8px;
   }
   .toolkit-grid {
@@ -793,7 +797,7 @@ h2 {
   }
   .site-header nav {
     gap: 16px;
-    font-size: 12.1px;
+    font-size: 13.31px;
   }
   .site-header nav a:first-child {
     display: none;
@@ -815,7 +819,7 @@ h2 {
     padding-block: 43px 55px;
   }
   .eyebrow {
-    font-size: 8.8px;
+    font-size: 9.68px;
     letter-spacing: 1.5px;
   }
   h1 {
@@ -823,11 +827,11 @@ h2 {
     letter-spacing: -3px;
   }
   .hero-intro {
-    font-size: 19.8px;
+    font-size: 21.78px;
   }
   .hero-detail {
     max-width: 100%;
-    font-size: 14.3px;
+    font-size: 15.73px;
   }
   .week-illustration {
     max-width: 440px;
@@ -839,7 +843,7 @@ h2 {
     min-height: 48px;
   }
   .block {
-    font-size: 9.9px;
+    font-size: 10.89px;
   }
   .paper-heading {
     font-size: 38.5px;
@@ -893,10 +897,10 @@ h2 {
     font-size: 12.1px;
   }
   .prompt-choice small {
-    font-size: 9.9px;
+    font-size: 10.89px;
   }
   .choice-index {
-    font-size: 16.5px;
+    font-size: 18.15px;
   }
   .choice-arrow {
     display: none;
@@ -916,12 +920,12 @@ h2 {
   }
   .prompt-output {
     height: 310px;
-    font-size: 12.1px;
+    font-size: 13.31px;
     padding: 14px;
   }
   .file-links {
     grid-template-columns: 1fr 1fr;
-    font-size: 11px;
+    font-size: 12.1px;
   }
   .questions {
     grid-template-columns: 1fr;
@@ -990,13 +994,13 @@ fieldset {
 @media (max-width: 760px) {
   .field-grid input,
   .field-grid textarea {
-    font-size: 17.6px;
+    font-size: 19.36px;
   }
   .field-grid label {
-    font-size: 12.1px;
+    font-size: 13.31px;
   }
   .input-note {
-    font-size: 11px;
+    font-size: 12.1px;
   }
   .prompt-choice strong {
     font-size: 13.2px;
@@ -1064,7 +1068,7 @@ html[data-theme="light"] {
   border: 1px solid var(--line);
   border-radius: 3px;
   min-height: 44px;
-  font-size: 13.2px;
+  font-size: 14.52px;
 }
 .preferences button:hover {
   border-color: var(--accent);
@@ -1120,7 +1124,7 @@ html[data-theme="dark"] .sun-icon {
   position: absolute;
   left: calc(100% + 8px);
   top: 0;
-  font-size: 12.1px;
+  font-size: 13.31px;
   color: var(--muted);
 }
 .footer-identity {
@@ -1134,7 +1138,7 @@ html[data-theme="dark"] .sun-icon {
   align-items: center;
   gap: 10px;
   text-decoration: none;
-  font-size: 14.3px;
+  font-size: 15.73px;
 }
 .signature-mark {
   width: 46px;
@@ -1160,7 +1164,7 @@ html[data-theme="dark"] .sun-icon {
   min-height: 44px;
   gap: 8px;
   text-decoration: none;
-  font-size: 12.1px;
+  font-size: 13.31px;
 }
 .social-links svg {
   width: 19px;
@@ -1234,6 +1238,6 @@ html[data-theme="dark"] .sun-icon {
 .weekly-metrics { margin-block: 1.5rem; }
 .weekly-metrics details { border-top: 1px solid var(--line); padding-block: 1rem; }
 .weekly-metrics summary { cursor: pointer; }
-.weekly-metrics p { max-width: 75ch; font-size: .95rem; line-height: 1.6; }
+.weekly-metrics p { max-width: 75ch; font-size: 1.045rem; line-height: 1.6; }
 .metrics-actions { display: flex; flex-wrap: wrap; gap: .75rem; }
 .metrics-actions button { min-height: 44px; max-width: 100%; white-space: normal; }
