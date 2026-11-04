@@ -10,7 +10,7 @@ Public entry point: **[aekr.io/weekly-leverage/](https://aekr.io/weekly-leverage
 
 - The compact language button opens floating EN/ES/PT squares without a surrounding panel; the active language is omitted from the alternatives. English, Spanish and Brazilian Portuguese cover the page, six prompts, optional planning context, statuses and UTF-8 text downloads. Browser language supplies the initial default; a successful manual choice can be remembered.
 - Light and dark palettes retain the editorial typography, ivory surfaces and rust accent. The first visit follows `prefers-color-scheme`; a manual override is remembered. The floating “Auto” action (labelled “Use system theme”) beside the language choices removes that override and resumes live system changes.
-- Type sizes are 10% larger than the original page, including responsive headings and form controls. Geometry is not scaled with a page zoom.
+- Body copy, descriptions, form labels/values, controls, prompt output and supporting text are an additional 10% larger than the prior release. Headings, the six prompt titles, display titles and header wordmark retain their prior sizes at every breakpoint. Geometry is not scaled with a page zoom.
 - Copy a prompt or download its customized `.txt`; individual starter prompts are available in every language without JavaScript. No full-kit download or source-repository link is exposed in the page. Historical source notes/archive remain repository material and are excluded from publication.
 - Optional context: work budget, buffer, week date, time zone, apps and a goal/constraint. Changing language retains those fields and the selected stage. Failed or superseded language loads do not replace the current prompt.
 
