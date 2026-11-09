@@ -1,7 +1,7 @@
 <!-- (kommiBo) Source-reviewed engineering note; optional diagnostic. -->
 # Record a source fingerprint without claiming a geometry pass
 
-A useful validation note identifies exactly which source and validator it refers
+A useful validation note identifies precisely which source and validator it refers
 to. This standard-library example prints a JSON manifest containing the checkout
 HEAD and SHA-256 digests of both generators and the validator. It labels its own
 evidence as source inspection, with runtime validation explicitly not executed.
@@ -18,7 +18,7 @@ The command does not modify the checkout or install FreeCAD. A digest changes if
 the file bytes change, including encoding or line endings; that is intentional
 provenance, not evidence of a geometric regression.
 
-To accompany a real geometry run, retain this manifest and the command exit status,
+To accompany a real geometry run, preserve this manifest and the command exit status,
 FreeCAD version, complete validator output, and worktree status from that same
 run. The baseline command is documented in the existing validation guide. Do not
 replace a failed or unavailable FreeCAD run with this successful manifest output:

@@ -3,7 +3,7 @@
 
 The scripts set `Label` after Draft creates an object. That display text is the
 appropriate lookup key for this repository's named guides; the automatically
-allocated `Name` can differ. `getObjectsByLabel` returns a list because labels need
+assigned `Name` can differ. `getObjectsByLabel` returns a list because labels need
 not be unique.
 
 The example resolves the monohull's five guide labels with an explicit exactly-one
@@ -14,7 +14,7 @@ label is its internal name.
 
 Expected output contains `Keel_Line`, both sheer labels, both chine labels, and
 `missing_matches 0`. A duplicate label stops with a diagnostic instead of silently
-choosing the first object. For the catamaran the same approach needs the hull
+selecting the first object. For the catamaran the same approach needs the hull
 prefix, for example `Port_Hull_Keel_Line`.
 
 These are lookup checks inside a freshly generated document, not persistent

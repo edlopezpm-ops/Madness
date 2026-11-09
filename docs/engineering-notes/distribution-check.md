@@ -1,7 +1,7 @@
 <!-- (kommiBo) Source-reviewed engineering note; optional diagnostic. -->
 # Check beam, depth, and rocker calculations together
 
-Before interpreting a curve, inspect the three distributions that generate its
+Before interpreting a curve, examine the three distributions that generate its
 control points. The monohull's beam floor is 12% of `B`; its depth floor is 45%
 of `D`. The catamaran uses 10% and 40%. These nonzero endpoints are explicit in
 the expressions; the monohull beam docstring's statement about zero endpoints
@@ -12,7 +12,7 @@ does not describe the implemented formula.
 | Monohull | 384 | 630 | -472.5 | -1400 |
 | Each catamaran hull | 120 | 480 | -336 | -1200 |
 
-The example mirrors the source expressions using source-read dimensions. It prints
+The example reproduces the source expressions using source-read dimensions. It prints
 X=0, L/4, L/2, 3L/4, L and asserts longitudinal symmetry at those samples. Negative
 Z is downward in these models; `depth_at` is a positive scale while `z_keel` is a
 signed coordinate. The monohull's `App.Units.Quantity(1).Value` is a neutral scalar
