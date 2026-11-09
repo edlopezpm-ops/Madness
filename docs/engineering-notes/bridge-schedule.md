@@ -3,7 +3,7 @@
 
 Bridge guide indices refer to the same station schedule as the hull curves. They
 are not distances in millimeters. The example reads the source list, validates its
-range and uniqueness, and calculates each guide's two endpoints.
+range and uniqueness, and computes each guide's two endpoints.
 
 | Index | X | Y endpoints | Z |
 | ---: | ---: | --- | ---: |
@@ -13,7 +13,7 @@ range and uniqueness, and calculates each guide's two endpoints.
 
 Expected output matches this table and reports a 4800 mm nominal span per guide.
 The checks require integer indices in `0 <= index < stations`; reducing the
-station count without revisiting the list can otherwise place a reference beyond
+station count without reviewing the list can otherwise place a reference beyond
 the intended model length. The current generator computes the coordinates directly
 and does not index an array, so an invalid index may produce geometry rather than
 an immediate `IndexError`.
