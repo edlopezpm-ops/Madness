@@ -26,19 +26,37 @@ certify their network behavior or the contents of every user-created model.
 Source evidence: [monohull generator](HullSample.py), [catamaran generator](CatHullSample.py), [geometry validator](tests/validate_models.py). This is a source review, not a guarantee about every
 dependency, host, historical artifact or future deployment.
 
-<!-- (kommiBo) Browser-local processing in the new owner-requested subproject. -->
+<!-- (kommiBo) Browser-local planning and separately controlled optional statistics. -->
 ## Weekly Leverage subproject
 
-[Weekly Leverage](projects/weekly-leverage/README.md) is a separate static prompt toolkit.
+[Weekly Leverage](projects/weekly-leverage/README.md) is a separate prompt toolkit with static assets
+and two optional statistics routes.
 Its customizer holds optional planning context temporarily in the current browser tab and
-uses it to prepare text for copying or download. It implements no analytics collector,
-account, cookie, model API call or calendar/task connector. Only the optional language and manual
-theme preferences persist on the device, under `weekly-leverage-language` and `weekly-leverage-theme`;
-planning entries are never persisted. Application fetches load fixed bundled UI/prompt JSON from this same
-subproject. Public files use normal HTTP caching; loaded language bundles are reused in memory.
-The footer links to AEKR master policies. This tool does not load the main site's collection, consent or
-policy-dialog scripts and does not enable future measurement. Any collection release needs its own
-reviewed implementation, updated disclosures and applicable choices before activation.
+uses it to prepare text for copying or download. It implements no account, cookie, model API call
+or calendar/task connector. Planning entries are never persisted or sent by the toolkit.
+The customizer fetches fixed bundled UI/prompt JSON from this same subproject. Public files use
+normal HTTP caching; loaded language bundles are reused in memory.
+
+Optional language and manual theme preferences persist under `weekly-leverage-language` and
+`weekly-leverage-theme`. A separate `weekly-leverage-analytics-v1` key stores the statistics choice,
+policy and a 30-day expiry. Denied storage leaves display choices in the current tab and keeps
+optional statistics off. Clearing browser storage removes remembered choices.
+
+The [optional statistics module](projects/weekly-leverage/usage.js) requires explicit Weekly-only
+permission and enabled, current service configuration before attempting one view per visible
+document. It has no visitor identifier, event queue or retries. GPC/DNT, refusal, expiry,
+withdrawal and storage failures stop prospective events. A view contains policy/consent/version
+metadata, language, a coarse device category and a referrer category; the
+[Worker](projects/weekly-leverage/hosting/worker.mjs) adds the hosting edge's country code or
+`unknown`. These application payloads exclude raw IP addresses, full referrers, raw browser
+strings, planning entries and prompt text.
+
+The fixed same-origin routes are `GET /weekly-leverage/api/metrics/config` and
+`POST /weekly-leverage/api/metrics`. Requests omit credentials; the Worker delegates only
+configuration and recording to the named Console service. These statements describe the
+reviewed source, not evidence of current hosted activation or storage retention. The footer
+links to AEKR master policies without loading the main site's collection, consent or
+policy-dialog scripts; those links and other products' choices do not authorize Weekly statistics.
 
 Copying the result into an AI assistant is a separate disclosure to the provider chosen
 by the visitor. External connectors, if available there, require their own authorization.
