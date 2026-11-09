@@ -1,7 +1,7 @@
 <!-- (kommiBo) Source-reviewed engineering note; optional diagnostic. -->
 # Measure curve bounds separately from nominal dimensions
 
-The numerical dimensions describe the defining points. A B-spline's extrema may
+The numeric dimensions describe the defining points. A B-spline's extrema may
 occur between those points, so measure its kernel bounding box before treating a
 nominal value as a physical envelope. The report covers each hull independently
 and includes its station and longitudinal curves.
@@ -15,7 +15,7 @@ and includes its station and longitudinal curves.
 The example excludes bridges and the centerline by requiring the `Port_Hull_` or
 `Starboard_Hull_` label prefix. It reports the inner gap as starboard YMin minus
 port YMax. Compare this measured result with the nominal 3600 mm point-based gap;
-the script deliberately does not assert their equality.
+the script intentionally does not assert their equality.
 
 Expected output has one union bound per hull and a positive measured gap under
 the current geometry. A negative gap would mean overlapping axis-aligned envelopes,
