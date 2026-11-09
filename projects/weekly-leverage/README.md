@@ -20,7 +20,7 @@ Defaults: 10-hour example budget, 20% unscheduled buffer, focus blocks up to 50 
 
 There is no application account, model API, app connector or cookie. Optional Weekly-only aggregate statistics require an explicit choice in the footer. Planning entries remain in the current tab until the visitor copies or downloads them. No plan content enters browser storage.
 
-Two optional display preferences persist: `weekly-leverage-language` and `weekly-leverage-theme`. The separately controlled `weekly-leverage-analytics-v1` key contains only an optional statistics choice, policy and expiry. They are separate from other AEKR products' preference keys. Denied storage does not block the tool; choices then last only in the tab. Clearing browser storage removes remembered choices. No service worker, visitor ID or event queue is implemented. Optional measurement is best effort, without retries.
+Two optional display preferences persist: `weekly-leverage-language` and `weekly-leverage-theme`. The separately controlled `weekly-leverage-analytics-v1` key contains only an optional statistics choice, policy and expiry. They are separate from other AEKR products' preference keys. Denied storage does not block the tool; language and theme choices then last only in the tab, while optional statistics stay off. Clearing browser storage removes remembered choices. No service worker, visitor ID or event queue is implemented. Optional measurement is best effort, without retries.
 
 Public UI/prompt JSON uses normal HTTP cache semantics; successfully loaded language bundles are also reused in memory. A failed request can be retried and a slow response cannot overwrite a newer language choice. These caches hold the supplied public assets, not visitor planning entries.
 
