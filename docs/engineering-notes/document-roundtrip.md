@@ -2,9 +2,9 @@
 # Save and reopen a generated document in temporary custody
 
 An `.FCStd` round-trip tests document persistence separately from source execution.
-The example creates a fresh catamaran document, captures object names and labels,
+The example creates a fresh catamaran document, records object names and labels,
 saves it in a temporary directory, closes that newly created document, then reopens
-the saved file and checks the same inventory and valid shapes.
+the saved file and verifies the same inventory and valid shapes.
 
 Expected output is `roundtrip_objects 44` and `fcstd_roundtrip True`. The opened
 temporary document is closed in a `finally` block before the directory is removed.

@@ -2,8 +2,8 @@
 # Exercise the presentation guard without a GUI
 
 Geometry construction and presentation are separate concerns in these scripts.
-`FreeCAD` supplies documents and vectors, `Draft` constructs curves, and the optional
-`FreeCADGui` import supplies view styling and camera operations. Ordinary CPython
+`FreeCAD` provides documents and vectors, `Draft` constructs curves, and the optional
+`FreeCADGui` import provides view styling and camera operations. Ordinary CPython
 can parse the file but cannot create its geometry without the FreeCAD modules.
 
 This standard-library example extracts only the monohull's `style` function as an

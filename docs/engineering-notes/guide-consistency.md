@@ -1,7 +1,7 @@
 <!-- (kommiBo) Source-reviewed engineering note; optional diagnostic. -->
 # Compare keel and sheer samples with station points
 
-The longitudinal keel and sheer guides are built from samples at each station.
+The longitudinal keel and sheer guides are constructed from samples at each station.
 This recipe checks the relationship between those document objects rather than
 only counting them. It uses the catamaran's port hull and compares all 15 stations.
 
@@ -14,7 +14,7 @@ only counting them. It uses the catamaran's port hull and compares all 15 statio
 Expected output is three rows, each reporting 15 matching samples. The script
 uses Draft's `Points` property, sorts stations by their numeric label suffix, and
 checks vector distances within 1e-7 mm. If the point count differs it fails before
-attempting a misleading pairwise comparison.
+starting a misleading pairwise comparison.
 
 Do not extend this equality test to the chine guides. Their points use lateral
 factor 0.50 and depth factor 0.65, whereas the station's neighboring points use

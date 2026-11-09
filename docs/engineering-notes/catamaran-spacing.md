@@ -3,7 +3,7 @@
 
 The catamaran's `overall_beam` is an outside-to-outside nominal dimension, whereas
 `hull_spacing` is the distance between hull centers. Keeping those dimensions
-separate prevents moving both hulls too far apart when exploring a wider design.
+separate prevents moving both hulls too far apart when evaluating a wider design.
 
 | Quantity | Expression | Current value |
 | --- | --- | ---: |
@@ -15,7 +15,7 @@ separate prevents moving both hulls too far apart when exploring a wider design.
 
 The example prints these values and rejects dimensions that would overlap the
 nominal midship section. `overall_beam >= 2 * hull_beam` gives a nonnegative
-nominal gap; an equality permits touching, not an engineered clearance. The source
+nominal gap; an equality allows touching, not an engineered clearance. The source
 does not enforce this condition, so this calculation is a preflight diagnostic.
 
 Expected output includes `center_spacing_mm 4800` and `inner_gap_mm 3600`. The

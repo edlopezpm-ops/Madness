@@ -2,7 +2,7 @@
 # Round-trip a selected guide through a temporary BREP
 
 Export a single known guide when investigating interchange rather than exporting
-the entire visible document indiscriminately. The example chooses the monohull's
+the entire visible document indiscriminately. The example selects the monohull's
 `Keel_Line`, writes its shape to a temporary BREP, reads it into a new `Part.Shape`,
 and compares length and X extent within 1e-6 mm.
 
@@ -14,7 +14,7 @@ and compares length and X extent within 1e-6 mm.
 
 Expected output is a positive file size and `brep_roundtrip True`. The temporary
 directory is removed at the end of the example, including on assertion failure.
-No committed model or user-selected file is overwritten. To retain an engineering
+No committed model or user-selected file is overwritten. To preserve an engineering
 artifact, adapt the destination deliberately and record the source revision and
 FreeCAD version beside it.
 
