@@ -39,7 +39,7 @@ The validator executes both generators and verifies their object counts, expecte
 
 ## License
 
-No project license has been selected. GitHub’s platform terms permit viewing and forking; broader project reuse requires appropriate permission. The separate AEKR provenance notice does not license the project material.
+Selected educational source and paired documentation are licensed under [MIT](LICENSES/MIT.txt), for the exact paths in the root [license scope](LICENSE). Unlisted material receives no new grant; existing permissions and third-party notices remain intact. AEKR provenance and website terms do not expand or restrict this MIT grant.
 
 ## Governance
 

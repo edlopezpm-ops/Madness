@@ -48,7 +48,8 @@ financial advice. Applicable mandatory rights and obligations remain in force.
 Visitors may use and adapt its six prompt texts for personal or internal business planning,
 as scoped in its [use notes](projects/weekly-leverage/USE-NOTES.txt). That narrow permission
 does not license the site source, unrelated repository material or third-party marks.
-The repository still has no general project license. Existing rights are preserved.
+The separate [scoped MIT grant](LICENSE) covers only the listed CAD source and paired
+documentation; it excludes the entire Weekly Leverage subproject. Existing rights are preserved.
 
 ## Your responsibility to understand and validate use
 
@@ -88,7 +89,7 @@ do not change the existing project's permissions or copyright ownership.
 
 ## License and ownership take precedence
 
-No root project license has been selected. There is no general grant to reuse the project scripts, explanations or generated reference material.
+The exact source and associated documentation paths listed in the root [license scope](LICENSE) are available under the standard [MIT License](LICENSES/MIT.txt). Unlisted material receives no new grant. These use notes and the AEKR website terms do not narrow the MIT permissions, add a noncommercial restriction or change the copyright holder.
 
 These notes describe operating boundaries, not a click-through agreement or a new
 software license. Existing license grants and applicable rights take precedence over

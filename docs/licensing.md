@@ -4,11 +4,11 @@
 
 Reviewed 2026-11-12.
 
-No root project license has been selected. There is no general grant to reuse the project scripts, explanations or generated reference material.
+The root [license scope](../LICENSE) now grants standard [MIT permissions](../LICENSES/MIT.txt) for its exact list of educational source and associated documentation. It is the sole authoritative path list. Unlisted material receives no new license; existing permissions remain intact.
 
 | Component | Evidence and licensing boundary |
 |---|---|
-| Hull scripts and engineering notes | No root project license; public visibility is not an open-source grant. |
+| Listed CAD source and paired documentation | Standard MIT for the exact paths in the root [scope notice](../LICENSE); preserve the copyright and permission notice in copies or substantial portions. |
 | Weekly Leverage prompt texts | Owner-requested downloadable planning deliverable; personal/internal business use and adaptation permitted only for the six prompt texts under [the scoped use notes](../projects/weekly-leverage/USE-NOTES.txt). Website source and unrelated material are not included in that permission. |
 | `FreeCAD`, `Draft`, `Part`, optional `FreeCADGui` | Imports from an external FreeCAD installation; its distribution carries its own licenses and third-party notices. |
 | User-saved CAD or exported geometry | Review source ownership and embedded metadata independently; do not infer a new license from a file extension. |
@@ -34,15 +34,17 @@ The linked commits identify the material being described; this inventory is not 
 |---|---|---|
 | 2026-11-01 | [Licensing inventory added](https://github.com/edlopezpm-ops/Madness/commit/d5ce62e7ef5b6adedad22e38e83b688dd19d3c81) | Documented the absent root license and external-runtime boundaries; no general license was added. |
 | 2026-11-03 | [Weekly Leverage introduced](https://github.com/edlopezpm-ops/Madness/commit/92b169c8c791bcba54a7e02ea4f9322cb3a0d98d) | Added the narrow prompt-text permission in `USE-NOTES.txt`; the rest of the repository remained without a general license. |
-| 2026-11-12 | This inventory update | Adds reuse guidance and traceable history; preserves the existing permissions. |
+| 2026-11-12 | Earlier inventory update | Added reuse guidance and traceable history without a new grant. |
+| 2026-11-12 | Owner-authorized [scoped MIT grant](../LICENSE) | Makes the exact listed source and documentation available under MIT; preserves previous permissions and third-party notices. |
 
 ## Which permission applies to a proposed reuse?
 
 | Proposed action | Applicable boundary |
 |---|---|
-| View or fork this public repository on GitHub | GitHub's platform terms permit these platform actions; this is not a general project license. |
+| View or fork this public repository on GitHub | GitHub's platform terms permit these platform actions; the root MIT grant separately covers its listed material. |
 | Copy or adapt the six Weekly Leverage prompts for personal/internal business planning | Follow the scoped [prompt permission](../projects/weekly-leverage/USE-NOTES.txt); it does not extend to website code or hull scripts. |
-| Redistribute or adapt hull scripts, website source or reference geometry beyond applicable rights | Request the missing permission and identify the exact files and revision. |
+| Use, modify or redistribute material covered by the root scope notice | Follow the standard MIT notice condition; commercial use needs no separate approval under this grant. |
+| Reuse Weekly Leverage website source, artwork or other unlisted material beyond existing permissions | Request the missing permission and identify the exact files and revision. |
 | Bundle FreeCAD or an add-on with a project copy | Review that distribution's own notices and requirements separately. |
 
 For a permission request, send [aekr@aekr.io](mailto:aekr@aekr.io) the repository,
