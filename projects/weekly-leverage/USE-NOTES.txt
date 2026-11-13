@@ -10,9 +10,24 @@ This is a planning aid. Review AI estimates, dates, time zones and outputs befor
 No particular productivity, financial or personal outcome is guaranteed. Applicable mandatory rights
 and obligations remain in force. This is not health, medical, legal or financial advice.
 
-The website does not connect to your apps or send your entries to an AI. Planning context stays temporarily in this browser tab. Only language and manual theme preferences
-may be saved on this device, using weekly-leverage-language and weekly-leverage-theme. No plan content
-is persisted, and no account, cookies, analytics collector or AI connection is implemented.
+(kommiBo) Data-handling clarification aligned with the optional-statistics implementation.
+The website does not connect to your apps or send your entries to an AI. Planning context stays
+temporarily in this browser tab and is included only in text you choose to copy or download.
+Language and manual theme preferences may be saved on this device using weekly-leverage-language
+and weekly-leverage-theme. No planning content is persisted in browser storage. No account,
+cookie or AI connection is implemented.
+
+Optional Weekly-only statistics require an explicit choice and enabled, current service
+configuration. The separate weekly-leverage-analytics-v1 key stores that choice, policy and
+a 30-day expiry. The implementation attempts one view per visible document without a visitor
+identifier, event queue or retries. Its application payload contains language, coarse device
+and referrer categories, and the incoming request's country code supplied by Cloudflare (or
+unknown), plus policy/consent/version metadata. It excludes planning entries, prompt text,
+raw IP addresses, full referrers and raw browser strings.
+GPC/DNT, refusal, expiry, withdrawal and storage failures stop prospective measurement.
+These notes describe the source behavior, not a guarantee that hosted collection is active.
+See usage.js, hosting/worker.mjs and the repository PRIVACY.md for the scoped implementation.
+
 Your host processes page/file requests under its own policies. When you paste a prompt into an
 AI assistant or use a connector, that provider's terms, settings and data practices apply.
 Avoid secrets or confidential tasks; use anonymized labels. Preview and approve any external changes.
