@@ -10,10 +10,25 @@ Esta es una ayuda para planificar. Revisa las estimaciones, fechas, zonas horari
 No se garantiza ningún resultado concreto de productividad, financiero o personal. Los derechos
 y las obligaciones de cumplimiento obligatorio que sean aplicables siguen vigentes. Esto no es asesoramiento de salud, médico, legal ni financiero.
 
-El sitio web no se conecta a tus apps ni envía tus datos a una IA. Los datos de planificación se procesan sólo
-en esta pestaña. Cuando eliges un idioma o un tema, esas dos preferencias pueden guardarse en tu navegador
-con las claves weekly-leverage-language y weekly-leverage-theme; no se guarda el contenido del plan.
-No se ha implementado una cuenta ni un sistema de recopilación de analítica.
+(kommiBo) Aclaración de datos alineada con la implementación de estadísticas opcionales.
+El sitio web no se conecta a tus apps ni envía tus datos a una IA. La información de planificación
+permanece temporalmente en esta pestaña y sólo se incluye en el texto que eliges copiar o descargar.
+Las preferencias de idioma y tema pueden guardarse en este dispositivo con las claves
+weekly-leverage-language y weekly-leverage-theme. El almacenamiento del navegador no guarda
+contenido del plan. No se implementa una cuenta, cookie ni conexión con IA.
+
+Las estadísticas opcionales de Weekly requieren una elección explícita y una configuración
+vigente y habilitada del servicio. La clave separada weekly-leverage-analytics-v1 guarda esa
+elección, la política y un vencimiento de 30 días. La implementación intenta registrar una vista
+por documento visible, sin identificador de visitante, cola de eventos ni reintentos. Los datos
+de aplicación contienen idioma, categorías generales de dispositivo y referencia, y el código
+de país de la solicitud entrante proporcionado por Cloudflare (o unknown), además de metadatos
+de política/consentimiento/versión. Excluyen datos del plan, texto de prompts, IP sin procesar,
+referencias completas y cadenas originales del navegador.
+GPC/DNT, rechazo, vencimiento, retirada y fallos de almacenamiento detienen la medición futura.
+Estas notas describen el código; no garantizan que la recopilación alojada esté activa.
+Consulta usage.js, hosting/worker.mjs y PRIVACY.md del repositorio para el alcance implementado.
+
 El proveedor de alojamiento procesa las solicitudes de páginas y archivos según sus propias políticas. Cuando pegas un prompt en un
 asistente de IA o usas un conector, se aplican las condiciones, la configuración y las prácticas de datos de ese proveedor.
 Evita secretos o tareas confidenciales; usa nombres anonimizados. Revisa y aprueba cualquier cambio externo antes de ejecutarlo.
