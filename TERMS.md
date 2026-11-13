@@ -2,7 +2,30 @@
 
 # Use and service boundaries — Madness
 
-Reviewed 2026-11-02.
+Reviewed 2026-11-12.
+
+## Relationship to AEKR website terms
+
+The [AEKR Terms of service](https://aekr.io/terms), version **20261025** reviewed
+on 2026-11-12, are the reference for the AEKR website and its stated functions.
+They distinguish public educational material from separately agreed professional
+services and recognize that other products have their own terms and privacy practices.
+The related [website Privacy](https://aekr.io/privacy) and
+[Cookies](https://aekr.io/cookies) notices describe that site's processing and choices.
+
+Weekly Leverage's hosted page links to those master policies, while its
+[product notice](PRIVACY.md#weekly-leverage-subproject) describes its own storage and
+optional statistics. Those links do not import the main site's collection scripts or
+authorize measurement. Its [prompt permission](projects/weekly-leverage/USE-NOTES.txt)
+remains limited to the prompt texts; it does not license the site source or CAD projects.
+
+
+This reference supplies context, not a replacement software license or a blanket
+incorporation of future website terms into this repository. Reading, cloning or
+forking the repository is not evidence of explicit acceptance or privacy consent.
+Existing license grants and mandatory rights remain controlling. Any material change
+to this project's terms needs an identified revision and the applicable notice or
+agreement process; no acceptance is inferred for an earlier revision.
 
 ## What is provided
 
