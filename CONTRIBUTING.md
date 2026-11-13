@@ -3,8 +3,9 @@
 # Contributing to Madness
 
 Start with the [README](README.md), [use boundaries](TERMS.md) and
-[licensing inventory](docs/licensing.md). This guide describes how to propose a
-change; it grants no new reuse rights and does not create a contributor agreement
+[licensing inventory](docs/licensing.md). The root [license scope](LICENSE) identifies
+the files available under the standard [MIT License](LICENSES/MIT.txt). This guide
+does not expand that scope, add conditions to MIT, or create a contributor agreement
 or promise of support. Submit only material you are entitled to share. For restricted
 material or an unclear permission, contact [aekr@aekr.io](mailto:aekr@aekr.io) before
 sharing it. Use [SECURITY.md](SECURITY.md) for a private vulnerability report.

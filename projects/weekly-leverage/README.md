@@ -70,7 +70,7 @@ The Open Graph/X image at `social-card.png` is the owner-supplied 1731×909 PNG,
 
 ## Use and permissions
 
-Visitors may use and adapt the six prompt texts for personal or internal business planning, as described in source [USE-NOTES.txt](USE-NOTES.txt). This permission covers those texts, not unrelated Madness material, website source or AEKR marks. The repository has no general project license. No third-party endorsement, compliance certification or guaranteed result is implied.
+Visitors may use and adapt the six prompt texts for personal or internal business planning, as described in source [USE-NOTES.txt](USE-NOTES.txt). This permission covers those texts, not unrelated Madness material, website source or AEKR marks. Madness now has a [scoped MIT grant](../../LICENSE) for listed CAD source and paired documentation; that grant excludes this entire subproject and does not change the prompt permission. No third-party endorsement, compliance certification or guaranteed result is implied.
 
 The supplied article draft is not published. The toolkit contains original planning instructions and does not reproduce an unverified quotation.
 
