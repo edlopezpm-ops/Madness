@@ -1,0 +1,70 @@
+# License scope — Madness
+
+<!-- (kommiBo) Owner-authorized scoped MIT grant, 2026-11-12. -->
+
+Copyright (c) 2026 Ed Lopez
+
+Ed Lopez licenses the project files listed below under the standard MIT License in
+[LICENSES/MIT.txt](LICENSES/MIT.txt). For this grant, the "Software" consists of the
+code and associated documentation at these exact, repository-relative paths. This
+file is the authoritative scope list; summaries elsewhere do not expand it.
+
+MIT permits use, copying, modification and redistribution, including commercial use,
+subject to its notice condition. Repository use notes and AEKR website terms do not
+add approval, noncommercial-use or other conditions to that MIT grant.
+
+## Covered paths
+
+- `CatHullSample.py`
+- `HullSample.py`
+- `docs/engineering-notes/README.md`
+- `docs/engineering-notes/bounds-report.md`
+- `docs/engineering-notes/brep-roundtrip.md`
+- `docs/engineering-notes/bridge-schedule.md`
+- `docs/engineering-notes/catamaran-spacing.md`
+- `docs/engineering-notes/distribution-check.md`
+- `docs/engineering-notes/document-roundtrip.md`
+- `docs/engineering-notes/evidence-manifest.md`
+- `docs/engineering-notes/guide-consistency.md`
+- `docs/engineering-notes/headless-style.md`
+- `docs/engineering-notes/label-lookup.md`
+- `docs/engineering-notes/object-tree.md`
+- `docs/engineering-notes/parameter-inventory.md`
+- `docs/engineering-notes/recompute-and-edit.md`
+- `docs/engineering-notes/repeat-run-custody.md`
+- `docs/engineering-notes/section-symmetry.md`
+- `docs/engineering-notes/shape-diagnostics.md`
+- `docs/engineering-notes/station-schedule.md`
+- `docs/examples/bounds-report.py`
+- `docs/examples/brep-roundtrip.py`
+- `docs/examples/bridge-schedule.py`
+- `docs/examples/catamaran-spacing.py`
+- `docs/examples/distribution-check.py`
+- `docs/examples/document-roundtrip.py`
+- `docs/examples/evidence-manifest.py`
+- `docs/examples/guide-consistency.py`
+- `docs/examples/headless-style.py`
+- `docs/examples/label-lookup.py`
+- `docs/examples/object-tree.py`
+- `docs/examples/parameter-inventory.py`
+- `docs/examples/recompute-and-edit.py`
+- `docs/examples/repeat-run-custody.py`
+- `docs/examples/section-symmetry.py`
+- `docs/examples/shape-diagnostics.py`
+- `docs/examples/station-schedule.py`
+- `tests/validate_models.py`
+
+## Material outside this grant
+
+Files not listed above receive no new license from this notice. Existing permissions
+remain intact, including separately licensed AEKR provenance material. Third-party
+software retains its own applicable licenses; this grant does not relicense the
+FreeCAD runtime, its dependencies or third-party material.
+
+The Weekly Leverage subproject is not included in this grant. Its existing limited
+permission for prompt texts remains in force under its USE-NOTES files. This notice
+does not newly license its website source, prompt collections, archive or artwork.
+
+No trademark or endorsement permission is granted. AEKR brand assets, private agent
+instructions and other unlisted material retain their existing status. Applicable
+rights and permissions granted previously are not withdrawn by this scope notice.
