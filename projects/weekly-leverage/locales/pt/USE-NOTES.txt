@@ -10,10 +10,25 @@ Este é um auxílio ao planejamento. Confira as estimativas, datas, fusos horár
 Nenhum resultado específico de produtividade, financeiro ou pessoal é garantido. Os direitos e as obrigações
 de aplicação obrigatória continuam em vigor. Isto não é orientação de saúde, médica, jurídica ou financeira.
 
-O site não se conecta aos seus aplicativos nem envia o que você preenche para uma IA. Os dados do planejamento ficam
-apenas nesta aba até você copiá-los ou baixá-los. As preferências de idioma e tema podem ser salvas neste dispositivo
-nas chaves de armazenamento do navegador weekly-leverage-language e weekly-leverage-theme. Não há implementação de
-conta, coleta de analytics ou conexão com IA.
+(kommiBo) Esclarecimento de dados alinhado à implementação de estatísticas opcionais.
+O site não se conecta aos seus aplicativos nem envia o que você preenche para uma IA. Os dados
+de planejamento ficam temporariamente nesta aba e só entram no texto que você decide copiar
+ou baixar. As preferências de idioma e tema podem ser salvas neste dispositivo nas chaves
+weekly-leverage-language e weekly-leverage-theme. Nenhum conteúdo do plano é persistido no
+armazenamento do navegador. Não há implementação de conta, cookie ou conexão com IA.
+
+As estatísticas opcionais do Weekly exigem uma escolha explícita e uma configuração atual
+e habilitada do serviço. A chave separada weekly-leverage-analytics-v1 guarda essa escolha,
+a política e uma validade de 30 dias. A implementação tenta registrar uma visualização por
+documento visível, sem identificador de visitante, fila de eventos ou novas tentativas. Os dados
+da aplicação contêm idioma, categorias gerais de dispositivo e origem, e o código do país da
+solicitação recebida fornecido pela Cloudflare (ou unknown), além de metadados de
+política/consentimento/versão. Excluem dados de planejamento, texto dos prompts, endereços IP
+brutos, referências completas e strings originais do navegador.
+GPC/DNT, recusa, expiração, retirada e falhas de armazenamento interrompem a medição futura.
+Estas notas descrevem o código, não garantem que a coleta hospedada esteja ativa.
+Consulte usage.js, hosting/worker.mjs e PRIVACY.md do repositório para o escopo implementado.
+
 O provedor de hospedagem processa as solicitações de páginas e arquivos conforme suas próprias políticas. Ao colar um prompt em um
 assistente de IA ou usar um conector, aplicam-se os termos, as configurações e as práticas de dados desse provedor.
 Evite segredos ou tarefas confidenciais; use rótulos anonimizados. Confira e aprove qualquer alteração externa antes da execução.

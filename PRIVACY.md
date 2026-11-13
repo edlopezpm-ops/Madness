@@ -2,7 +2,7 @@
 
 # Privacy — Madness
 
-Reviewed 2026-11-01.
+Reviewed 2026-11-12.
 
 ## Scope and responsibility
 
@@ -47,9 +47,12 @@ permission and enabled, current service configuration before attempting one view
 document. It has no visitor identifier, event queue or retries. GPC/DNT, refusal, expiry,
 withdrawal and storage failures stop prospective events. A view contains policy/consent/version
 metadata, language, a coarse device category and a referrer category; the
-[Worker](projects/weekly-leverage/hosting/worker.mjs) adds the hosting edge's country code or
-`unknown`. These application payloads exclude raw IP addresses, full referrers, raw browser
-strings, planning entries and prompt text.
+[Worker](projects/weekly-leverage/hosting/worker.mjs) adds the incoming request's country
+code supplied by Cloudflare through `request.cf.country`, or `unknown` when it is unavailable
+or not a two-letter uppercase code. This represents the request's country, not the hosting
+data center's location; see [Cloudflare's request properties](https://developers.cloudflare.com/workers/runtime-apis/request/#incomingrequestcfproperties).
+These application payloads exclude raw IP addresses, full referrers, raw browser strings,
+planning entries and prompt text.
 
 The fixed same-origin routes are `GET /weekly-leverage/api/metrics/config` and
 `POST /weekly-leverage/api/metrics`. Requests omit credentials; the Worker delegates only

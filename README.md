@@ -43,6 +43,9 @@ No project license has been selected. GitHub’s platform terms permit viewing a
 
 ## Governance
 
+<!-- (kommiBo) Reproducible contribution guidance and permission boundaries. -->
+See [Contributing](CONTRIBUTING.md) for project-specific checks, useful bug reports and PR expectations.
+
 Changes follow the AEKR engineering workflow: bounded scope, deterministic geometry validation, pull-request review, and revert-PR recovery. The PR author and reviewer are distinct technical actors under one HOC authority; the reviewer approves and merges the exact validated head. This separation is an operational control, not an independent audit.
 
 <!-- (kommiBo) Source-backed documentation navigation. -->
