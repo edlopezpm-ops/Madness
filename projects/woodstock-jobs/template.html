@@ -33,7 +33,7 @@
   <a class="skip" href="#listado">Saltar al listado de empleos</a>
   <header class="site-header shell">
     <a class="brand" href="https://aekr.io/" target="_blank" rel="noopener noreferrer" aria-label="AEKR"><img src="@@LOGO_DATA@@" alt="" width="40" height="40"><span>AEKR <span class="brand-divider">/</span> <span class="brand-sub">EMPLEO LOCAL</span></span></a>
-    <div class="header-actions"><button class="quiet-button print-button" id="print" type="button">Imprimir</button><button class="quiet-button share-button" id="share" type="button">Compartir ↗</button></div>
+    <div class="header-actions"><button class="quiet-button print-button" id="print" type="button">Imprimir</button><button class="quiet-button share-button" id="share" type="button">Copiar enlace ↗</button></div>
   </header>
   <main class="shell">
     <section class="hero" aria-labelledby="page-title">
@@ -100,11 +100,8 @@
       let toastTimer;
       function toast(message) { clearTimeout(toastTimer); $('toast').textContent = message; $('toast').hidden = false; toastTimer = setTimeout(() => { $('toast').hidden = true; }, 3500); }
       $('share').addEventListener('click', async () => {
-        const url = '@@PUBLIC_URL@@';
-        if (navigator.share) {
-          try { await navigator.share({ title: document.title, text: 'Empleos cerca de Highway 92 y Trickum Road, Woodstock.', url }); return; }
-          catch (error) { if (error.name === 'AbortError') return; }
-        }
+        const url = location.hostname === 'htmlpreview.github.io' ? location.href.split('#')[0] : '@@PUBLIC_URL@@';
+        $('share-url').value = url;
         try { await navigator.clipboard.writeText(url); toast('Enlace copiado. Ya puedes compartirlo.'); }
         catch (_) { $('copy-dialog').showModal(); $('share-url').select(); }
       });
