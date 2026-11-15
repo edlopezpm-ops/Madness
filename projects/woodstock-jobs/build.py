@@ -16,8 +16,8 @@ from pathlib import Path
 from urllib.parse import quote, urlparse
 
 ROOT = Path(__file__).resolve().parent
-PUBLIC_URL = "https://woodstock-jobs-aekr.edlopezpm.chatgpt.site/"
-REPOSITORY_URL = "https://github.com/edlopezpm-ops/Madness/tree/main/projects/woodstock-jobs"
+PUBLIC_URL = "https://htmlpreview.github.io/?https://github.com/edlopezpm-ops/Madness/blob/add-woodstock-job-directory-2026-11-14/projects/woodstock-jobs/index.html"
+REPOSITORY_URL = "https://github.com/edlopezpm-ops/Madness/tree/add-woodstock-job-directory-2026-11-14/projects/woodstock-jobs"
 STATUS_LABELS = {
     "published": "Anuncio publicado",
     "continuous": "Contratación continua",

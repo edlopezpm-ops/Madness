@@ -1,6 +1,6 @@
 # Empleos a una milla · Woodstock
 
-**[Abrir el listado para compartir](https://woodstock-jobs-aekr.edlopezpm.chatgpt.site/)**
+**[Abrir el listado para compartir](https://htmlpreview.github.io/?https://github.com/edlopezpm-ops/Madness/blob/add-woodstock-job-directory-2026-11-14/projects/woodstock-jobs/index.html)**
 
 Página estática en español, con estilo AEKR claro, para consultar empleos alrededor
 del semáforo de **Highway 92 y Trickum Road, Woodstock, Georgia 30188**.
@@ -80,9 +80,17 @@ solicitudes generales y registros pendientes. No convertir rangos estimados por
 agregadores en salarios del empleador. Recalcular el radio si cambia una dirección.
 
 Actualizar `jobs.json`, las fechas y los recuentos documentados, ejecutar el
-generador, revisar la página y guardar los cambios en este subdirectorio. La copia
-web publicada debe coincidir con `index.html` de este repositorio. Un commit en
-GitHub por sí solo no actualiza la copia alojada en Sites.
+generador, revisar la página y guardar los cambios en este subdirectorio. La vista web enlazada usa HTML Preview para abrir el `index.html` público de esta
+rama. Conservar la rama `add-woodstock-job-directory-2026-11-14` mientras ese enlace
+siga en uso. Al migrar a otra URL, actualizar `PUBLIC_URL` y `REPOSITORY_URL` en
+el generador, regenerar el HTML y verificar el botón Compartir.
+
+Los archivos están guardados en la rama pública y en el
+[pull request #26](https://github.com/edlopezpm-ops/Madness/pull/26). La integración
+en `main` requiere la aprobación de una persona distinta del último autor del push,
+según las reglas del repositorio. La primera publicación en Sites fue aceptada por
+el servicio, pero su URL devolvió un 404 en la comprobación pública; por eso se
+utiliza la vista del HTML de GitHub como enlace para compartir.
 
 La publicación inicial se comprobó con 108 tarjetas, filtros de búsqueda y estado,
 contador de resultados, botón para copiar el enlace, y diseño de 390 y 320 píxeles
