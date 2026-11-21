@@ -2,7 +2,7 @@
 
 # Use and service boundaries — Madness
 
-Reviewed 2026-11-12.
+Reviewed 2026-11-21 (revisited).
 
 ## Relationship to AEKR website terms
 
